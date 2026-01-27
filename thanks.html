@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за заявку — Leadspikers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --black: #0A0A0A;
+            --white: #FFFFFF;
+            --gray-100: #F3F4F6;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font);
+            background: var(--gray-100);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        
+        .thanks-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        
+        .thanks-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #FF4D00 0%, #FF6B2C 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .thanks-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2.5;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        p {
+            font-size: 16px;
+            color: var(--gray-500);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        
+        .thanks-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .thanks-btn:hover {
+            background: #E54500;
+        }
+        
+        @media (max-width: 480px) {
+            .thanks-card {
+                padding: 32px 24px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thanks-card">
+        <div class="thanks-icon">
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h1>Заявка отправлена!</h1>
+        <p>Спасибо за обращение. Мы свяжемся с вами в течение рабочего дня, чтобы обсудить ваш проект.</p>
+        <a href="/" class="thanks-btn">Вернуться на главную</a>
+    </div>
+</body>
+</html>

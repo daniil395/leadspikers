@@ -1042,14 +1042,15 @@
                 <h3 class="cta-form-title">Оставьте заявку</h3>
                 <p class="cta-form-subtitle">Ответим в течение 15 минут в рабочее время</p>
                 
-                <form class="cta-form" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;">
-                    <input type="text" class="cta-input" placeholder="Ваше имя" required>
-                    <input type="email" class="cta-input" placeholder="Email" required>
-                    <input type="tel" class="cta-input" placeholder="+7 (___) ___-__-__">
-                    <input type="text" class="cta-input" placeholder="Telegram (@username или ссылка)">
+                <form class="cta-form" name="leadspikers-about" method="POST" data-netlify="true" action="/thanks.html">
+                    <input type="hidden" name="form-name" value="leadspikers-about">
+                    <input type="text" name="name" class="cta-input" placeholder="Ваше имя" required>
+                    <input type="email" name="email" class="cta-input" placeholder="Email" required>
+                    <input type="tel" name="phone" class="cta-input" placeholder="+7 (___) ___-__-__">
+                    <input type="text" name="telegram" class="cta-input" placeholder="Telegram (@username или ссылка)">
                     
                     <div class="cta-checkbox">
-                        <input type="checkbox" id="cta-consent" checked required>
+                        <input type="checkbox" name="consent" id="cta-consent" checked required>
                         <label for="cta-consent">
                             Отправляя заявку, вы даёте согласие на обработку персональных данных
                         </label>
@@ -1122,16 +1123,17 @@
             <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Обсудить проект</h2>
             <p style="font-size: 15px; color: var(--gray-500); margin-bottom: 24px;">Оставьте заявку — свяжемся в течение дня</p>
             
-            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); closeModal();">
-                <input type="text" class="modal-input" placeholder="Имя" required>
-                <input type="email" class="modal-input" placeholder="Email" required>
+            <form name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="leadspikers-project">
+                <input type="text" name="name" class="modal-input" placeholder="Имя" required>
+                <input type="email" name="email" class="modal-input" placeholder="Email" required>
                 <div style="display: flex; gap: 12px;">
                     <div style="width: 60px; height: 56px; background: var(--gray-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--gray-600);">RU</div>
-                    <input type="tel" class="modal-input" placeholder="+7 (___) ___-__-__" style="flex: 1;">
+                    <input type="tel" name="phone" class="modal-input" placeholder="+7 (___) ___-__-__" style="flex: 1;">
                 </div>
-                <input type="text" class="modal-input" placeholder="Telegram (@username или ссылка)">
+                <input type="text" name="telegram" class="modal-input" placeholder="Telegram (@username или ссылка)">
                 <div style="display: flex; align-items: flex-start; gap: 12px; margin: 8px 0;">
-                    <input type="checkbox" id="modal-consent" checked required style="width: 18px; height: 18px; margin-top: 2px;">
+                    <input type="checkbox" name="consent" id="modal-consent" checked required style="width: 18px; height: 18px; margin-top: 2px;">
                     <label for="modal-consent" style="font-size: 13px; color: var(--gray-500); line-height: 1.5;">Отправляя заявку, вы даёте согласие на обработку персональных данных</label>
                 </div>
                 <button type="submit" class="modal-submit">Обсудить проект</button>

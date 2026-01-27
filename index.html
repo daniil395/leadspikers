@@ -1923,17 +1923,18 @@
                 <h3 class="cta-form-title">Оставьте заявку</h3>
                 <p class="cta-form-subtitle">Ответим в течение 15 минут в рабочее время</p>
                 
-                <form class="cta-form" onsubmit="handleCTASubmit(event)">
-                    <input type="text" class="cta-input" placeholder="Ваше имя" required>
-                    <input type="email" class="cta-input" placeholder="Email" required>
+                <form class="cta-form" name="leadspikers-cta" method="POST" data-netlify="true" action="/thanks.html">
+                    <input type="hidden" name="form-name" value="leadspikers-cta">
+                    <input type="text" name="name" class="cta-input" placeholder="Ваше имя" required>
+                    <input type="email" name="email" class="cta-input" placeholder="Email" required>
                     <div class="cta-phone-row">
                         <div class="cta-flag">RU</div>
-                        <input type="tel" class="cta-input" placeholder="+7 (___) ___-__-__">
+                        <input type="tel" name="phone" class="cta-input" placeholder="+7 (___) ___-__-__">
                     </div>
-                    <input type="text" class="cta-input" placeholder="Telegram (@username или ссылка)">
+                    <input type="text" name="telegram" class="cta-input" placeholder="Telegram (@username или ссылка)">
                     
                     <div class="cta-checkbox">
-                        <input type="checkbox" id="cta-consent" checked required>
+                        <input type="checkbox" name="consent" id="cta-consent" checked required>
                         <label for="cta-consent">
                             Отправляя заявку, вы даёте согласие на обработку персональных данных
                         </label>
@@ -1996,17 +1997,18 @@
             <h2>Обсудить проект</h2>
             <p class="modal-subtitle">Оставьте заявку — свяжемся в течение дня</p>
             
-            <form class="modal-form" onsubmit="handleSubmit(event)">
-                <input type="text" class="modal-input" placeholder="Имя" required>
-                <input type="email" class="modal-input" placeholder="Email" required>
+            <form class="modal-form" name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="leadspikers-project">
+                <input type="text" name="name" class="modal-input" placeholder="Имя" required>
+                <input type="email" name="email" class="modal-input" placeholder="Email" required>
                 <div class="modal-phone-row">
                     <div class="modal-flag">🇷🇺</div>
-                    <input type="tel" class="modal-input" placeholder="+7 (___) ___-__-__" required>
+                    <input type="tel" name="phone" class="modal-input" placeholder="+7 (___) ___-__-__" required>
                 </div>
-                <input type="text" class="modal-input" placeholder="Telegram (@username или ссылка)">
+                <input type="text" name="telegram" class="modal-input" placeholder="Telegram (@username или ссылка)">
                 
                 <div class="modal-checkbox">
-                    <input type="checkbox" id="consent" checked required>
+                    <input type="checkbox" name="consent" id="consent" checked required>
                     <label for="consent">
                         Отправляя заявку, вы даёте согласие на обработку персональных данных
                     </label>
@@ -2051,14 +2053,12 @@
         }
         
         function handleSubmit(event) {
-            event.preventDefault();
-            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
-            closeModal();
+            // Form submits natively to Netlify Forms
+            // Redirect handled by action="/thanks.html"
         }
         
         function handleCTASubmit(event) {
-            event.preventDefault();
-            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            // Form submits natively to Netlify Forms
         }
         
         document.addEventListener('keydown', function(e) {

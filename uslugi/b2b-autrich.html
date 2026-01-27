@@ -1655,11 +1655,12 @@
             
             <div class="cta-form-wrapper">
                 <div style="background: linear-gradient(135deg, var(--orange), var(--orange-light)); border-radius: 24px; padding: 48px; width: 100%; max-width: 480px; box-shadow: 0 32px 64px rgba(255, 77, 0, 0.35);">
-                    <form style="display: flex; flex-direction: column; gap: 16px;">
-                        <input type="text" placeholder="Имя" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
-                        <input type="email" placeholder="Email" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
-                        <input type="tel" placeholder="Телефон" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
-                        <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                    <form name="leadspikers-b2b-autrich" method="POST" data-netlify="true" action="/thanks.html" style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="hidden" name="form-name" value="leadspikers-b2b-autrich">
+                        <input type="text" name="name" placeholder="Имя" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="tel" name="phone" placeholder="Телефон" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="text" name="telegram" placeholder="Telegram (@username)" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
                         <button type="submit" style="width: 100%; padding: 20px; background: var(--black); color: var(--white); border: none; border-radius: 12px; font-size: 16px; font-weight: 700; font-family: var(--font); cursor: pointer; margin-top: 8px;">Обсудить проект</button>
                     </form>
                 </div>
@@ -1718,11 +1719,12 @@
             <h2>Обсудить проект</h2>
             <p class="modal-subtitle">Оставьте контакты — свяжемся в течение часа</p>
             
-            <form class="modal-form" onsubmit="handleSubmit(event)">
-                <input type="text" class="modal-input" placeholder="Имя" required>
-                <input type="email" class="modal-input" placeholder="Email" required>
-                <input type="tel" class="modal-input" placeholder="Телефон" required>
-                <input type="text" class="modal-input" placeholder="Telegram (@username или ссылка)">
+            <form class="modal-form" name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="leadspikers-project">
+                <input type="text" name="name" class="modal-input" placeholder="Имя" required>
+                <input type="email" name="email" class="modal-input" placeholder="Email" required>
+                <input type="tel" name="phone" class="modal-input" placeholder="Телефон" required>
+                <input type="text" name="telegram" class="modal-input" placeholder="Telegram (@username или ссылка)">
                 <button type="submit" class="modal-submit">Обсудить проект</button>
             </form>
         </div>

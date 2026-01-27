@@ -1239,16 +1239,17 @@
             <h2>Оставляйте заявку, чтобы попасть на бесплатную встречу</h2>
             <p class="modal-subtitle">Обсудим вашу задачу и покажем, как мы работаем</p>
             
-            <form class="modal-form" onsubmit="handleSubmit(event)">
-                <input type="text" class="modal-input" placeholder="Имя" required>
-                <input type="email" class="modal-input" placeholder="Email" required>
+            <form class="modal-form" name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="leadspikers-project">
+                <input type="text" name="name" class="modal-input" placeholder="Имя" required>
+                <input type="email" name="email" class="modal-input" placeholder="Email" required>
                 <div class="modal-phone-wrapper">
                     <div class="modal-phone-flag">🇷🇺</div>
-                    <input type="tel" class="modal-input modal-phone-input" placeholder="• 077 123456" required>
+                    <input type="tel" name="phone" class="modal-input modal-phone-input" placeholder="• 077 123456" required>
                 </div>
                 
                 <div class="modal-checkbox">
-                    <input type="checkbox" id="consent" checked required>
+                    <input type="checkbox" name="consent" id="consent" checked required>
                     <label for="consent">
                         Отправляя заявку, вы даёте согласие на обработку своих персональных данных
                     </label>

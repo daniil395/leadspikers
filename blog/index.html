@@ -812,10 +812,11 @@
             </div>
             
             <div style="background: linear-gradient(135deg, var(--orange), #FF6B2C); border-radius: 20px; padding: 36px; box-shadow: 0 24px 48px rgba(255, 77, 0, 0.3);">
-                <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;" style="display: flex; flex-direction: column; gap: 14px;">
-                    <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
-                    <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
-                    <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                <form name="leadspikers-blog" method="POST" data-netlify="true" action="/thanks.html" style="display: flex; flex-direction: column; gap: 14px;">
+                    <input type="hidden" name="form-name" value="leadspikers-blog">
+                    <input type="text" name="name" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                    <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                    <input type="text" name="telegram" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
                     <button type="submit" style="width: 100%; padding: 18px; background: #0D0D0D; color: #FFFFFF; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; margin-top: 8px;">Обсудить проект</button>
                 </form>
             </div>
@@ -900,13 +901,14 @@
             <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Обсудить проект</h2>
             <p style="font-size: 15px; color: #71717a; margin-bottom: 24px;">Оставьте заявку — свяжемся в течение дня</p>
             
-            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); closeModal();">
-                <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
-                <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
-                <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
-                <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+            <form name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+                <input type="hidden" name="form-name" value="leadspikers-project">
+                <input type="text" name="name" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="text" name="telegram" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
                 <div style="display: flex; align-items: flex-start; gap: 12px; margin: 8px 0;">
-                    <input type="checkbox" checked required style="width: 18px; height: 18px; margin-top: 2px;">
+                    <input type="checkbox" name="consent" checked required style="width: 18px; height: 18px; margin-top: 2px;">
                     <label style="font-size: 13px; color: #71717a; line-height: 1.5;">Отправляя заявку, вы даёте согласие на обработку персональных данных</label>
                 </div>
                 <button type="submit" style="width: 100%; padding: 18px; background: #FF4D00; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px;">Обсудить проект</button>
