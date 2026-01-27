@@ -1923,7 +1923,7 @@
                 <h3 class="cta-form-title">Оставьте заявку</h3>
                 <p class="cta-form-subtitle">Ответим в течение 15 минут в рабочее время</p>
                 
-                <form class="cta-form" name="leadspikers-cta" method="POST" data-netlify="true" action="/thanks.html">
+                <form class="cta-form" name="leadspikers-cta" method="POST" data-netlify="true" action="/thanks/">
                     <input type="hidden" name="form-name" value="leadspikers-cta">
                     <input type="text" name="name" class="cta-input" placeholder="Ваше имя" required>
                     <input type="email" name="email" class="cta-input" placeholder="Email" required>
@@ -1997,7 +1997,7 @@
             <h2>Обсудить проект</h2>
             <p class="modal-subtitle">Оставьте заявку — свяжемся в течение дня</p>
             
-            <form class="modal-form" name="leadspikers-project" method="POST" data-netlify="true" action="/thanks.html">
+            <form class="modal-form" name="leadspikers-project" method="POST" data-netlify="true" action="/thanks/">
                 <input type="hidden" name="form-name" value="leadspikers-project">
                 <input type="text" name="name" class="modal-input" placeholder="Имя" required>
                 <input type="email" name="email" class="modal-input" placeholder="Email" required>
@@ -2054,7 +2054,7 @@
         
         function handleSubmit(event) {
             // Form submits natively to Netlify Forms
-            // Redirect handled by action="/thanks.html"
+            // Redirect handled by action="/thanks/"
         }
         
         function handleCTASubmit(event) {
