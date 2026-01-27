@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Метрики B2B-аутрича: reply rate, conversion rate, CAC. Какие показатели отслеживать, как их считать и улучшать. Бенчмарки по нишам.">
+    <meta name="keywords" content="метрики аутрича, reply rate, conversion rate, CAC, B2B лидогенерация, аутрич-маркетинг, ROI">
+    
+    <title>Метрики аутрича: что отслеживать и как оптимизировать — Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-light: #FF6B2C;
+            --black: #0D0D0D;
+            --gray-900: #18181B;
+            --gray-600: #52525B;
+            --gray-500: #71717A;
+            --gray-400: #A1A1AA;
+            --gray-200: #E4E4E7;
+            --gray-100: #F4F4F5;
+            --white: #FFFFFF;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 800px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: var(--font); background: #F9FAFB; color: var(--gray-600); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--orange); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header { position: fixed; top: 0; left: 0; right: 0; height: 72px; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); z-index: 1000; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; color: var(--black); }
+        .logo-icon { width: 36px; height: 36px; background: var(--orange); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .logo-text { font-size: 20px; font-weight: 700; }
+        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav-link { font-size: 14px; font-weight: 500; color: var(--gray-600); }
+        .nav-link:hover { color: var(--black); text-decoration: none; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; font-size: 14px; font-weight: 600; border-radius: 10px; transition: all 0.2s; text-decoration: none; }
+        .btn-primary { background: var(--orange); color: var(--white); }
+        .btn-primary:hover { background: var(--orange-light); text-decoration: none; }
+        
+        .article { padding: 120px 24px 80px; }
+        .article-inner { max-width: var(--max-width); margin: 0 auto; }
+        .article-header { margin-bottom: 48px; }
+        .article-tag { display: inline-block; padding: 6px 12px; background: rgba(255, 77, 0, 0.1); color: var(--orange); font-size: 12px; font-weight: 600; border-radius: 6px; margin-bottom: 16px; }
+        .article-title { font-size: 42px; font-weight: 800; color: var(--black); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 24px; }
+        .article-meta { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--gray-500); }
+        
+        .article-content { background: var(--white); border-radius: 20px; padding: 56px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .article-content h2 { font-size: 28px; font-weight: 700; color: var(--black); margin: 48px 0 24px; line-height: 1.3; }
+        .article-content h2:first-child { margin-top: 0; }
+        .article-content h3 { font-size: 22px; font-weight: 700; color: var(--black); margin: 36px 0 16px; }
+        .article-content p { margin-bottom: 20px; font-size: 17px; line-height: 1.8; }
+        .article-content ul, .article-content ol { margin: 20px 0; padding-left: 28px; }
+        .article-content li { margin-bottom: 12px; font-size: 17px; }
+        .article-content strong { color: var(--black); font-weight: 600; }
+        
+        .highlight-box { background: var(--gray-100); border-left: 4px solid var(--orange); padding: 24px; margin: 32px 0; border-radius: 0 12px 12px 0; }
+        .highlight-box p { margin-bottom: 0; font-size: 16px; }
+        
+        .metric-card { background: var(--gray-100); border-radius: 16px; padding: 24px; margin: 20px 0; }
+        .metric-card h4 { font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+        .metric-card .formula { font-family: monospace; background: var(--white); padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; color: var(--gray-600); }
+        .metric-card p { margin-bottom: 0; font-size: 15px; }
+        
+        .comparison-table { width: 100%; margin: 32px 0; border-collapse: collapse; }
+        .comparison-table th, .comparison-table td { padding: 16px; text-align: left; border-bottom: 1px solid var(--gray-200); font-size: 15px; }
+        .comparison-table th { background: var(--gray-100); font-weight: 600; color: var(--black); }
+        .comparison-table tr:hover td { background: rgba(255, 77, 0, 0.03); }
+        
+        .internal-links { background: var(--gray-100); border-radius: 16px; padding: 32px; margin: 48px 0; }
+        .internal-links h4 { font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 16px; }
+        .internal-links ul { list-style: none; padding: 0; margin: 0; }
+        .internal-links li { margin-bottom: 8px; }
+        .internal-links a { font-size: 15px; }
+        
+        .article-cta { background: var(--gray-900); border-radius: 20px; padding: 48px; margin-top: 56px; text-align: center; }
+        .article-cta h3 { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+        .article-cta p { font-size: 17px; color: var(--gray-400); margin-bottom: 32px; }
+        .article-cta .btn-primary { padding: 16px 32px; font-size: 16px; }
+        
+        .footer { padding: 64px 24px 32px; background: var(--white); border-top: 1px solid var(--gray-200); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-bottom { font-size: 13px; color: var(--gray-400); }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .article-title { font-size: 32px; }
+            .article-content { padding: 32px 24px; }
+            .article-content h2 { font-size: 24px; }
+            .comparison-table { font-size: 13px; }
+            .comparison-table th, .comparison-table td { padding: 12px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            <nav class="nav">
+                <a href="../uslugi/" class="nav-link">Услуги</a>
+                <a href="../kejsy/" class="nav-link">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="./" class="nav-link">Блог</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+        </div>
+    </header>
+
+    <article class="article">
+        <div class="article-inner">
+            <header class="article-header">
+                <span class="article-tag">Аналитика</span>
+                <h1 class="article-title">Метрики аутрича: что отслеживать и как оптимизировать</h1>
+                <div class="article-meta">
+                    <span>9 мин чтения</span>
+                    <span>Обновлено: январь 2026</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <h2>Зачем отслеживать метрики аутрича</h2>
+                
+                <p>Аутрич без метрик — это стрельба вслепую. Вы можете отправлять сотни сообщений, но без данных не поймёте, что работает, а что нет. Метрики позволяют принимать решения на основе фактов: какой канал эффективнее, какие сообщения получают ответы, где воронка «протекает».</p>
+                
+                <p>В этой статье разберём ключевые метрики B2B-аутрича, как их считать, какие бенчмарки считать нормальными и как улучшать каждую из них.</p>
+                
+                <h2>Ключевые метрики аутрича</h2>
+                
+                <h3>1. Reply Rate (Процент ответов)</h3>
+                
+                <div class="metric-card">
+                    <h4>Reply Rate</h4>
+                    <div class="formula">Reply Rate = (Количество ответов / Количество отправленных сообщений) × 100%</div>
+                    <p>Показывает, какой процент контактов ответил на ваше сообщение (любым ответом, включая отказы).</p>
+                </div>
+                
+                <p><strong>Бенчмарки:</strong></p>
+                <ul>
+                    <li>Telegram: 25-45% (хорошо), &lt;15% (проблема)</li>
+                    <li>Email: 5-15% (хорошо), &lt;3% (проблема)</li>
+                    <li>LinkedIn: 10-25% (хорошо), &lt;5% (проблема)</li>
+                </ul>
+                
+                <p><strong>Как улучшить:</strong> персонализация сообщений, улучшение темы письма, тестирование opening lines, оптимизация времени отправки.</p>
+                
+                <h3>2. Positive Reply Rate (Процент заинтересованных ответов)</h3>
+                
+                <div class="metric-card">
+                    <h4>Positive Reply Rate</h4>
+                    <div class="formula">Positive Reply Rate = (Заинтересованные ответы / Количество отправленных) × 100%</div>
+                    <p>Процент ответов, выражающих интерес к продолжению диалога (не включает отказы и автоответчики).</p>
+                </div>
+                
+                <p><strong>Бенчмарки:</strong></p>
+                <ul>
+                    <li>Telegram: 10-20% (хорошо)</li>
+                    <li>Email: 2-7% (хорошо)</li>
+                    <li>LinkedIn: 5-12% (хорошо)</li>
+                </ul>
+                
+                <p><strong>Как улучшить:</strong> улучшение value proposition, более точный ICP, работа с возражениями.</p>
+                
+                <h3>3. Meeting Rate (Процент назначенных встреч)</h3>
+                
+                <div class="metric-card">
+                    <h4>Meeting Rate</h4>
+                    <div class="formula">Meeting Rate = (Назначенные встречи / Количество отправленных) × 100%</div>
+                    <p>Процент контактов, которые согласились на встречу.</p>
+                </div>
+                
+                <p><strong>Бенчмарки:</strong></p>
+                <ul>
+                    <li>Telegram: 5-12% (хорошо)</li>
+                    <li>Email: 1-5% (хорошо)</li>
+                    <li>LinkedIn: 2-8% (хорошо)</li>
+                </ul>
+                
+                <p><strong>Как улучшить:</strong> навыки ведения диалога, чёткое value proposition, удобное бронирование (Calendly), быстрый response time.</p>
+                
+                <h3>4. Show Rate (Процент состоявшихся встреч)</h3>
+                
+                <div class="metric-card">
+                    <h4>Show Rate</h4>
+                    <div class="formula">Show Rate = (Состоявшиеся встречи / Назначенные встречи) × 100%</div>
+                    <p>Процент назначенных встреч, которые реально состоялись.</p>
+                </div>
+                
+                <p><strong>Бенчмарки:</strong> 75-90% (норма), &lt;70% (проблема)</p>
+                
+                <p><strong>Как улучшить:</strong> напоминания за день и за час, подтверждение встречи, правильный выбор времени, качественная квалификация до встречи.</p>
+                
+                <h3>5. CPL (Cost per Lead)</h3>
+                
+                <div class="metric-card">
+                    <h4>CPL — Стоимость лида</h4>
+                    <div class="formula">CPL = Затраты на аутрич / Количество квалифицированных лидов</div>
+                    <p>Сколько стоит привлечение одного лида через аутрич.</p>
+                </div>
+                
+                <p><strong>Бенчмарки в России:</strong></p>
+                <ul>
+                    <li>SMB сегмент: 3 000 - 10 000 ₽</li>
+                    <li>Mid-market: 8 000 - 20 000 ₽</li>
+                    <li>Enterprise: 15 000 - 40 000 ₽</li>
+                </ul>
+                
+                <h3>6. CAC (Customer Acquisition Cost)</h3>
+                
+                <div class="metric-card">
+                    <h4>CAC — Стоимость привлечения клиента</h4>
+                    <div class="formula">CAC = Все затраты на привлечение / Количество новых клиентов</div>
+                    <p>Полная стоимость привлечения одного платящего клиента.</p>
+                </div>
+                
+                <p><strong>Важно:</strong> CAC должен быть значительно меньше LTV (пожизненной ценности клиента). Оптимальное соотношение LTV:CAC = 3:1 и выше.</p>
+                
+                <h2>Воронка аутрича: где теряются лиды</h2>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Этап воронки</th>
+                        <th>Метрика</th>
+                        <th>Типичная конверсия</th>
+                    </tr>
+                    <tr>
+                        <td>Отправлено → Доставлено</td>
+                        <td>Delivery Rate</td>
+                        <td>95-99%</td>
+                    </tr>
+                    <tr>
+                        <td>Доставлено → Открыто (email)</td>
+                        <td>Open Rate</td>
+                        <td>30-50%</td>
+                    </tr>
+                    <tr>
+                        <td>Открыто → Ответ</td>
+                        <td>Reply Rate</td>
+                        <td>5-15%</td>
+                    </tr>
+                    <tr>
+                        <td>Ответ → Заинтересованный</td>
+                        <td>Positive Rate</td>
+                        <td>30-50% от ответов</td>
+                    </tr>
+                    <tr>
+                        <td>Заинтересованный → Встреча</td>
+                        <td>Meeting Rate</td>
+                        <td>40-70%</td>
+                    </tr>
+                    <tr>
+                        <td>Встреча назначена → Состоялась</td>
+                        <td>Show Rate</td>
+                        <td>75-90%</td>
+                    </tr>
+                    <tr>
+                        <td>Встреча → Сделка</td>
+                        <td>Win Rate</td>
+                        <td>15-35%</td>
+                    </tr>
+                </table>
+                
+                <div class="highlight-box">
+                    <p><strong>Пример расчёта:</strong> Отправили 1000 сообщений → 400 открытий (40%) → 40 ответов (10%) → 20 заинтересованных (50%) → 12 встреч (60%) → 10 состоялось (83%) → 3 сделки (30%)</p>
+                </div>
+                
+                <h2>Как улучшать метрики</h2>
+                
+                <h3>Низкий Reply Rate</h3>
+                <ul>
+                    <li>Проверьте качество базы — возможно, контакты нецелевые</li>
+                    <li>Усильте персонализацию — откажитесь от шаблонов</li>
+                    <li>Пересмотрите opening line — первое предложение критично</li>
+                    <li>Тестируйте время отправки — утро vs вечер, дни недели</li>
+                    <li>Проверьте доставляемость (для email)</li>
+                </ul>
+                
+                <h3>Низкая конверсия ответов во встречи</h3>
+                <ul>
+                    <li>Отвечайте быстрее — скорость ответа критична</li>
+                    <li>Предлагайте конкретное время вместо «давайте созвонимся»</li>
+                    <li>Используйте Calendly или аналог для бронирования</li>
+                    <li>Прорабатывайте возражения</li>
+                </ul>
+                
+                <h3>Низкий Show Rate</h3>
+                <ul>
+                    <li>Отправляйте напоминания за день и за час</li>
+                    <li>Подтверждайте встречу утром в день созвона</li>
+                    <li>Квалифицируйте лид до назначения встречи</li>
+                    <li>Выбирайте удобное время (не пятница вечер)</li>
+                </ul>
+                
+                <h2>Инструменты для трекинга метрик</h2>
+                
+                <ul>
+                    <li><strong>CRM</strong> — HubSpot, Pipedrive, amoCRM для отслеживания воронки</li>
+                    <li><strong>Email-трекинг</strong> — Apollo, Lemlist, Instantly для open/reply rate</li>
+                    <li><strong>Spreadsheets</strong> — Google Sheets для кастомных дашбордов</li>
+                    <li><strong>Telegram</strong> — ручной трекинг или специализированные инструменты</li>
+                </ul>
+                
+                <div class="internal-links">
+                    <h4>Читайте также:</h4>
+                    <ul>
+                        <li><a href="telegram-autrich-guide.html">Telegram-аутрич в 2026: полное руководство</a></li>
+                        <li><a href="b2b-lidogeneracia-russia.html">B2B лидогенерация в России: что работает в 2026 году</a></li>
+                        <li><a href="generacia-vstreach-lpr.html">Генерация встреч с ЛПР: от первого сообщения до календаря</a></li>
+                        <li><a href="icp-segmentacia-bazy.html">ICP и сегментация: как найти идеальных клиентов</a></li>
+                    </ul>
+                </div>
+                
+                <h2>Заключение</h2>
+                
+                <p>Метрики — это язык, на котором нужно говорить об аутриче. Без данных вы не сможете ни оценить эффективность, ни улучшить результаты. Начните с базовых метрик (reply rate, meeting rate, show rate), а затем углубляйтесь в unit economics (CPL, CAC, ROI).</p>
+                
+                <p>Помните: цель не метрики ради метрик, а принятие решений на основе данных. Каждое число должно вести к конкретному действию по улучшению.</p>
+                
+                <div class="article-cta">
+                    <h3>Хотите улучшить метрики аутрича?</h3>
+                    <p>Проведём аудит вашей текущей системы и покажем точки роста.</p>
+                    <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-bottom">
+                © 2026 Leadspikers. Все права защищены.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4D00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B2C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон с легким градиентом -->
+  <rect width="512" height="512" rx="128" fill="#FAFAFA"/>
+  
+  <!-- Круг с градиентом -->
+  <circle cx="256" cy="256" r="180" fill="url(#orangeGradient)"/>
+  
+  <!-- Молния (более стилизованная) -->
+  <path d="M 256 140 L 256 230 L 310 230 L 275 310 L 256 290 L 210 290 L 256 140 Z" 
+        fill="#FFFFFF" 
+        stroke="none"/>
+  
+  <!-- Внутренняя деталь молнии для объема -->
+  <path d="M 256 160 L 256 230 L 300 230 L 270 290 L 256 280 L 230 280 L 256 160 Z" 
+        fill="#FFE5D9" 
+        opacity="0.3"/>
+</svg>

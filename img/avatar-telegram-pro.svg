@@ -1,0 +1,78 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4D00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B2C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="512" height="512" rx="0" fill="#FAFAFA"/>
+  
+  <!-- Верхняя секция с логотипами -->
+  <rect width="512" height="140" fill="#FFFFFF"/>
+  
+  <!-- Логотипы платформ (более стилизованные) -->
+  <g transform="translate(256, 70)">
+    <!-- Gmail -->
+    <g transform="translate(-180, 0)">
+      <rect x="-32" y="-32" width="64" height="64" rx="14" fill="#EA4335"/>
+      <path d="M -22 -12 L -12 -22 L 12 -22 L 22 -12 L 22 12 L 12 22 L -12 22 L -22 12 Z" fill="#FFFFFF"/>
+      <path d="M -22 -12 L 0 -32 L 22 -12" stroke="#EA4335" stroke-width="2.5" fill="none"/>
+    </g>
+    
+    <!-- Telegram -->
+    <g transform="translate(-60, 0)">
+      <circle cx="0" cy="0" r="32" fill="#0088CC"/>
+      <path d="M -14 -9 L 14 -9 L 10 9 L 0 5 L -10 9 Z" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- LinkedIn -->
+    <g transform="translate(60, 0)">
+      <rect x="-32" y="-32" width="64" height="64" rx="10" fill="#0077B5"/>
+      <path d="M -16 -16 L -16 16 L -6 16 L -6 -6 L -16 -6 Z" fill="#FFFFFF"/>
+      <circle cx="10" cy="-10" r="9" fill="#FFFFFF"/>
+      <path d="M 6 6 L 6 16 L 16 16 L 16 6 Z" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Outlook -->
+    <g transform="translate(180, 0)">
+      <rect x="-32" y="-32" width="64" height="64" rx="10" fill="#0078D4"/>
+      <rect x="-22" y="-16" width="44" height="32" rx="3" fill="#FFFFFF"/>
+      <path d="M -22 -16 L -22 16 L 22 16 L 22 -16 Z" fill="none" stroke="#0078D4" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="10" fill="#0078D4"/>
+    </g>
+  </g>
+  
+  <!-- Название Leadspikers (более крупное) -->
+  <text x="256" y="250" 
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="80" 
+        font-weight="900" 
+        fill="#0A0A0A" 
+        text-anchor="middle" 
+        letter-spacing="-0.04em">Leadspikers</text>
+  
+  <!-- Оранжевая линия под названием (толще) -->
+  <line x1="100" y1="270" x2="412" y2="270" 
+        stroke="url(#orangeGradient)" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+  
+  <!-- Текст описания (более читаемый) -->
+  <text x="256" y="320" 
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="30" 
+        font-weight="600" 
+        fill="#404040" 
+        text-anchor="middle" 
+        letter-spacing="-0.015em">Аутрич, который работает:</text>
+  
+  <text x="256" y="365" 
+        font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="30" 
+        font-weight="600" 
+        fill="#404040" 
+        text-anchor="middle" 
+        letter-spacing="-0.015em">эффективное привлечение В2В-клиентов</text>
+</svg>

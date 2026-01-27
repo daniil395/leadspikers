@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Обучение B2B-аутричу от Leadspikers. Передаём методологию и инструменты, чтобы ваша команда самостоятельно генерировала встречи с ЛПРами.">
+    
+    <title>Обучение аутричу — Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-light: #FF6B2C;
+            --orange-dark: #E04500;
+            --orange-glow: rgba(255, 77, 0, 0.15);
+            --orange-subtle: rgba(255, 77, 0, 0.08);
+            
+            
+            --black: #0D0D0D;
+            --gray-900: #1A1A1A;
+            --gray-800: #2D2D2D;
+            --gray-700: #404040;
+            --gray-600: #525252;
+            --gray-500: #6B6B6B;
+            --gray-400: #9CA3AF;
+            --gray-300: #D1D5DB;
+            --gray-200: #E5E7EB;
+            --gray-100: #F3F4F6;
+            --gray-50: #F9FAFB;
+            --white: #FFFFFF;
+            
+            --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --max-width: 1200px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--gray-600);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 12px rgba(255, 77, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+        
+        .nav-link {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-600);
+            transition: all var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            transition: all var(--transition);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--black);
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(255, 77, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(255, 77, 0, 0.5);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--gray-200);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            z-index: 999;
+            padding: 80px 24px 24px;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .mobile-nav.active { display: flex; }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--black);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .mobile-nav .btn-primary {
+            margin-top: 16px;
+            padding: 16px;
+            font-size: 16px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .menu-toggle { display: flex; }
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 24px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            left: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 77, 0, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .hero-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.1) 0%, rgba(255, 77, 0, 0.05) 100%);
+            border: 1px solid rgba(255, 77, 0, 0.2);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 16px rgba(255, 77, 0, 0.1);
+        }
+        
+        .hero h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.8;
+        }
+        
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-stat {
+            flex: 1;
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            transition: all var(--transition);
+        }
+        
+        .hero-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 77, 0, 0.12);
+            border-color: rgba(255, 77, 0, 0.2);
+        }
+        
+        .hero-stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        
+        .hero-stat-label {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 700px) {
+            .hero-stats { flex-direction: column; gap: 16px; }
+        }
+        
+        /* Section */
+        .section {
+            padding: 48px 24px;
+            position: relative;
+        }
+        
+        .section-alt {
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        
+        .section-header h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Target Grid */
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .target-card {
+            text-align: center;
+            padding: 48px 28px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            transition: all var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .target-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            transform: scaleX(0);
+            transition: transform var(--transition);
+        }
+        
+        .target-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(255, 77, 0, 0.12);
+            border-color: transparent;
+        }
+        
+        .target-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .target-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--orange-subtle), rgba(255, 77, 0, 0.04));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            transition: all var(--transition);
+        }
+        
+        .target-card:hover .target-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.15), rgba(255, 77, 0, 0.08));
+        }
+        
+        .target-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .target-card p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 800px) {
+            .target-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .skill-card {
+            padding: 36px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            transition: all var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--orange), var(--orange-light));
+            transform: scaleY(0);
+            transition: transform var(--transition);
+        }
+        
+        .skill-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 20px 40px rgba(255, 77, 0, 0.1);
+            border-color: transparent;
+        }
+        
+        .skill-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .skill-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--orange-subtle), rgba(255, 77, 0, 0.04));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+        
+        .skill-card p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 900px) {
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Process Grid */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .process-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(255, 77, 0, 0.1);
+            border-color: rgba(255, 77, 0, 0.2);
+        }
+        
+        .process-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .process-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .process-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--white);
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+        }
+        
+        .process-header h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        .process-card > p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.65;
+        }
+        
+        @media (max-width: 700px) {
+            .process-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .result-card {
+            padding: 40px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            transition: all var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(255, 77, 0, 0.1);
+            border-color: rgba(255, 77, 0, 0.2);
+        }
+        
+        .result-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .result-list {
+            list-style: none;
+        }
+        
+        .result-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        
+        .result-list li::before {
+            content: '✓';
+            color: var(--orange);
+            font-weight: 700;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--orange-subtle);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 700px) {
+            .results-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Key Result */
+        .key-result {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 64px 48px;
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.06) 0%, rgba(255, 77, 0, 0.02) 100%);
+            border: 2px solid rgba(255, 77, 0, 0.15);
+            border-radius: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .key-result::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+        }
+        
+        .key-result h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+        
+        .key-result > p {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .key-result-stats {
+            display: flex;
+            justify-content: center;
+            gap: 56px;
+        }
+        
+        .key-result-stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .key-result-stat-label {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 600px) {
+            .key-result { padding: 48px 24px; }
+            .key-result-stats { flex-direction: column; gap: 32px; }
+        }
+        
+        /* Cases Preview */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .case-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 36px;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+        
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            transform: scaleX(0);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(255, 77, 0, 0.15);
+            border-color: transparent;
+        }
+        
+        .case-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .case-tag {
+            display: inline-flex;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, var(--orange-subtle), rgba(255, 77, 0, 0.04));
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 16px;
+        }
+        
+        .case-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .case-card > p {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .case-link {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--orange);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all var(--transition);
+        }
+        
+        .case-card:hover .case-link {
+            gap: 10px;
+        }
+        
+        @media (max-width: 900px) {
+            .cases-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .cases-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Pricing */
+        /* Pricing Horizontal */
+        .pricing-horizontal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--white);
+            border: 2px solid var(--orange);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(255, 77, 0, 0.12);
+        }
+        
+        .pricing-main {
+            padding: 48px;
+            border-right: 1px solid var(--gray-200);
+        }
+        
+        .pricing-features-side {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            background: var(--gray-50);
+        }
+        
+        .pricing-tag {
+            display: inline-flex;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .pricing-subtitle {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            margin-bottom: 4px;
+        }
+        
+        .pricing-note {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--gray-700);
+        }
+        
+        .pricing-feature::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--orange-subtle), rgba(255, 77, 0, 0.04));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--orange);
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 800px) {
+            .pricing-horizontal { grid-template-columns: 1fr; }
+            .pricing-main { border-right: none; border-bottom: 1px solid var(--gray-200); }
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 0;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(255, 77, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(255, 107, 44, 0.1) 0%, transparent 50%);
+        }
+        
+        .cta-layout {
+            display: grid;
+            grid-template-columns: 1fr 520px;
+            min-height: 500px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-content {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .cta-content h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .cta-content > p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .cta-form-wrapper {
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            padding: 48px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+        
+        .cta-qr {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .cta-qr img {
+            width: 160px;
+            height: 160px;
+        }
+        
+        .cta-handle {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--orange-light);
+            margin-bottom: 4px;
+        }
+        
+        .cta-response {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        @media (max-width: 900px) {
+            .cta-layout { grid-template-columns: 1fr; }
+            .cta-content { padding: 60px 32px 40px; }
+            .cta-form-wrapper { padding: 20px 32px 60px; }
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 80px 24px 40px;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--gray-500);
+            max-width: 280px;
+            line-height: 1.7;
+        }
+        
+        .footer-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-link {
+            font-size: 15px;
+            color: var(--gray-600);
+            transition: all var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--orange);
+            transform: translateX(4px);
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+        
+        @media (max-width: 800px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 48px;
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--gray-100);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--gray-600);
+            transition: all var(--transition);
+        }
+        
+        .modal-close:hover {
+            background: var(--gray-200);
+            color: var(--black);
+        }
+        
+        .modal h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 12px;
+            padding-right: 40px;
+        }
+        
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+        
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 18px 24px;
+            border: 2px solid var(--gray-200);
+            border-radius: 14px;
+            font-size: 16px;
+            font-family: var(--font);
+            color: var(--black);
+            transition: all var(--transition);
+        }
+        
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 4px rgba(255, 77, 0, 0.1);
+        }
+        
+        .modal-submit {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            border: none;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 800;
+            font-family: var(--font);
+            cursor: pointer;
+            transition: all var(--transition);
+            margin-top: 8px;
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.35);
+        }
+        
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.45);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="./" class="nav-link active">Услуги</a>
+                <a href="../kejsy/" class="nav-link">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="../blog/" class="nav-link">Блог</a>
+                <a href="../kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Меню" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../uslugi/" class="mobile-nav-link">Услуги</a>
+        <a href="../kejsy/" class="mobile-nav-link">Кейсы</a>
+        <a href="../o-nas/" class="mobile-nav-link">О нас</a>
+        <a href="../blog/" class="mobile-nav-link">Блог</a>
+        <a href="../kontakty/" class="mobile-nav-link">Контакты</a>
+        <button class="btn btn-primary" onclick="openModal(); toggleMobileNav();">Обсудить проект</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">Независимость от подрядчиков</div>
+            
+            <h1>Обучение команды <span>аутричу</span></h1>
+            
+            <p class="hero-subtitle">
+                Передаём методологию и инструменты, чтобы ваша команда самостоятельно генерировала встречи с ЛПРами. Навсегда.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">2–3</div>
+                    <div class="hero-stat-label">недели обучения</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">20+</div>
+                    <div class="hero-stat-label">встреч/месяц после</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">100%</div>
+                    <div class="hero-stat-label">независимость</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Needs -->
+    <section class="section section-alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Кому подойдёт обучение</h2>
+                <p>Передаём методологию тем, кто хочет развивать компетенции внутри команды</p>
+            </div>
+            
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">🏢</div>
+                    <h3>Компании с отделом продаж</h3>
+                    <p>Хотите добавить аутрич как канал привлечения клиентов и не зависеть от внешних подрядчиков.</p>
+                </div>
+                
+                <div class="target-card">
+                    <div class="target-icon">🚀</div>
+                    <h3>Стартапы на стадии роста</h3>
+                    <p>Нужен предсказуемый поток встреч с ЛПРами, но бюджет не позволяет аутрич под ключ.</p>
+                </div>
+                
+                <div class="target-card">
+                    <div class="target-icon">👨‍💼</div>
+                    <h3>Консалтинговые компании</h3>
+                    <p>Хотите масштабировать экспертизу и добавить услугу аутрича для своих клиентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Learn -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Чему научим</h2>
+                <p>Полный цикл B2B-аутрича — от поиска ЛПРов до закрытия на встречу</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>Поиск и сегментация ЛПРов</h3>
+                    <p>Методики поиска релевантных ЛПРов, работа с триггерами, построение ICP и сегментация базы.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">✏️</div>
+                    <h3>Персонализация сообщений</h3>
+                    <p>Техники написания персонализированных текстов, работа с возражениями, построение воронки.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Техническая настройка</h3>
+                    <p>Настройка доменов, DNS, прогрев почт, работа с лимитами, обход спама и доставляемость.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">💬</div>
+                    <h3>Ведение диалогов</h3>
+                    <p>Техники ведения переписки, работа с возражениями, доведение до встречи, управление воронкой.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Метрики и аналитика</h3>
+                    <p>Построение системы метрик, отслеживание конверсий, оптимизация воронки, работа с данными.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">📈</div>
+                    <h3>Масштабирование</h3>
+                    <p>Организация работы команды, распределение задач, автоматизация рутины, масштабирование процесса.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Format -->
+    <section class="section section-alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Формат обучения</h2>
+                <p>Практико-ориентированный подход: учим на реальных задачах вашего бизнеса</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-header">
+                        <div class="process-number">01</div>
+                        <h3>Теория + практика (1 неделя)</h3>
+                    </div>
+                    <p>Интенсивные сессии по всем аспектам аутрича. Разбираем методологию на примере вашего продукта и ЦА.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-header">
+                        <div class="process-number">02</div>
+                        <h3>Запуск под присмотром (1–2 недели)</h3>
+                    </div>
+                    <p>Команда запускает кампанию самостоятельно. Мы контролируем качество, даём обратную связь, корректируем подход.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-header">
+                        <div class="process-number">03</div>
+                        <h3>Первые результаты</h3>
+                    </div>
+                    <p>Доводим до первых встреч. Фиксируем процессы, передаём все материалы и инструменты.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-header">
+                        <div class="process-number">04</div>
+                        <h3>Поддержка после обучения</h3>
+                    </div>
+                    <p>Консультируем по возникающим вопросам, помогаем оптимизировать процесс, проводим аудит при необходимости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid CTA 1 -->
+    <section style="padding: 0 24px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="background: linear-gradient(135deg, #0D0D0D, #1a1a1f); border-radius: 20px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+                <div>
+                    <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px;">Подойдёт ли обучение вашей команде?</h3>
+                    <p style="font-size: 15px; color: #A1A1AA; max-width: 480px;">Расскажите о текущей ситуации — оценим, какой формат принесёт лучший результат.</p>
+                </div>
+                <button onclick="openModal()" class="btn" style="background: var(--orange); color: #fff; padding: 16px 28px; font-size: 15px; white-space: nowrap; border-radius: 12px; border: none; cursor: pointer;">Обсудить проект →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Что получаете</h2>
+                <p>Полный набор инструментов для самостоятельной работы</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>📚 Материалы</h3>
+                    <ul class="result-list">
+                        <li>Методология поиска и сегментации ЛПРов</li>
+                        <li>Шаблоны и скрипты сообщений</li>
+                        <li>Чек-листы технической настройки</li>
+                        <li>Трекеры и таблицы аналитики</li>
+                        <li>База знаний по работе с возражениями</li>
+                    </ul>
+                </div>
+                
+                <div class="result-card">
+                    <h3>🛠 Результаты</h3>
+                    <ul class="result-list">
+                        <li>Настроенная инфраструктура (домены, почты)</li>
+                        <li>Готовая база ЛПРов по вашему ICP</li>
+                        <li>Запущенная кампания</li>
+                        <li>Первые встречи с ЛПРами</li>
+                        <li>Автономная команда, готовая масштабироваться</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Result -->
+    <section class="section section-alt">
+        <div class="section-inner">
+            <div class="key-result">
+                <h3>🎯 Ключевой результат</h3>
+                <p>После обучения вы получите выстроенную систему генерации качественных В2В-встреч, интегрированную в вашу компанию. Ваша команда будет самостоятельно генерировать стабильный поток встреч с ЛПРами.</p>
+                
+                <div class="key-result-stats">
+                    <div>
+                        <div class="key-result-stat-value">20+</div>
+                        <div class="key-result-stat-label">встреч в месяц</div>
+                    </div>
+                    <div>
+                        <div class="key-result-stat-value">100%</div>
+                        <div class="key-result-stat-label">независимость</div>
+                    </div>
+                    <div>
+                        <div class="key-result-stat-value">∞</div>
+                        <div class="key-result-stat-label">навыки навсегда</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Кто уже обучился</h2>
+                <p>Команды, которые теперь генерируют встречи самостоятельно</p>
+            </div>
+            
+            <div class="cases-grid">
+                <a href="../kejsy/rechka-ai-legaltech-obuchenie.html" class="case-card">
+                    <span class="case-tag">AI / LegalTech</span>
+                    <h3>Rechka AI</h3>
+                    <p>После обучения команда самостоятельно генерирует 20+ встреч в месяц и привлекла 6 клиентов.</p>
+                    <span class="case-link">Читать кейс →</span>
+                </a>
+                
+                <a href="../kejsy/xway-marketplace-obuchenie.html" class="case-card">
+                    <span class="case-tag">eCommerce</span>
+                    <h3>XWAY</h3>
+                    <p>Обучили команду с нуля. Первая встреча — в процессе обучения. Команда работает автономно.</p>
+                    <span class="case-link">Читать кейс →</span>
+                </a>
+                
+                <a href="../kejsy/jobski-hrtech-telegram.html" class="case-card">
+                    <span class="case-tag">HRTech</span>
+                    <h3>JOBSKI</h3>
+                    <p>После проекта под ключ прошли обучение. Теперь команда делает 18+ встреч в месяц самостоятельно.</p>
+                    <span class="case-link">Читать кейс →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>Стоимость</h2>
+            </div>
+            
+            <div class="pricing-horizontal">
+                <div class="pricing-main">
+                    <div class="pricing-tag">Инвестиция в команду</div>
+                    <h3 class="pricing-title">Обучение команды</h3>
+                    <p class="pricing-subtitle">Самостоятельный аутрич навсегда</p>
+                    <div class="pricing-price">от 120 000 ₽</div>
+                    <p class="pricing-note">Полная методология и все инструменты</p>
+                    <button class="btn btn-primary" onclick="openModal()" style="width: 100%; padding: 18px; margin-top: 24px;">Обсудить обучение</button>
+                </div>
+                <div class="pricing-features-side">
+                    <div class="pricing-feature">Полная методология и все инструменты</div>
+                    <div class="pricing-feature">2–3 недели интенсивного обучения</div>
+                    <div class="pricing-feature">Практика на реальных задачах</div>
+                    <div class="pricing-feature">Доведение до первых встреч</div>
+                    <div class="pricing-feature">Поддержка после обучения</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-layout">
+            <div class="cta-content">
+                <h2>Готовы обучить команду?</h2>
+                <p>На бесплатной консультации разберём вашу задачу и поможем определиться с форматом сотрудничества.</p>
+                
+                <div style="display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap;">
+                    <a href="mailto:daniil@leadspikers.com" style="padding: 14px 24px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">
+                        📧 daniil@leadspikers.com
+                    </a>
+                    <a href="https://t.me/leadspikers_info" target="_blank" style="padding: 14px 24px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">
+                        💬 @leadspikers_info
+                    </a>
+                </div>
+            </div>
+            
+            <div class="cta-form-wrapper">
+                <div style="background: linear-gradient(135deg, var(--orange), var(--orange-light)); border-radius: 24px; padding: 48px; width: 100%; max-width: 480px; box-shadow: 0 32px 64px rgba(255, 77, 0, 0.35);">
+                    <form style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="text" placeholder="Имя" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="email" placeholder="Email" required style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="tel" placeholder="Телефон" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 18px 22px; border: none; border-radius: 12px; font-size: 16px; font-family: var(--font); background: var(--white);">
+                        <button type="submit" style="width: 100%; padding: 20px; background: var(--black); color: var(--white); border: none; border-radius: 12px; font-size: 16px; font-weight: 700; font-family: var(--font); cursor: pointer; margin-top: 8px;">Обсудить проект</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич. Выводим на диалог с теми, кто принимает решения.</p>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="../kejsy/" class="footer-link">Кейсы</a>
+                        <a href="../o-nas/" class="footer-link">О нас</a>
+                        <a href="../blog/" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="mailto:daniil@leadspikers.com" class="footer-link">daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2026 Leadspikers. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Обсудить обучение</h2>
+            <p class="modal-subtitle">Оставьте контакты — свяжемся в течение часа</p>
+            
+            <form class="modal-form" onsubmit="handleSubmit(event)">
+                <input type="text" class="modal-input" placeholder="Имя" required>
+                <input type="email" class="modal-input" placeholder="Email" required>
+                <input type="tel" class="modal-input" placeholder="Телефон" required>
+                <input type="text" class="modal-input" placeholder="Telegram (@username или ссылка)">
+                <button type="submit" class="modal-submit">Обсудить проект</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.menu-toggle');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            closeModal();
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+        
+        // Scroll animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section-inner').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leadspikers — агентство персонализированного B2B-аутрича. Превращаем холодные контакты в горячие встречи с ЛПРами через Telegram, Email и LinkedIn.">
+    
+    <title>Leadspikers — Персонализированный B2B-аутрич</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-hover: #E54500;
+            --black: #0A0A0B;
+            --gray-900: #141416;
+            --gray-800: #1E1E21;
+            --gray-700: #2E2E33;
+            --gray-600: #52525B;
+            --gray-500: #71717A;
+            --gray-400: #A1A1AA;
+            --gray-300: #D4D4D8;
+            --gray-200: #E4E4E7;
+            --gray-100: #F4F4F5;
+            --bg: #FAFAFA;
+            --white: #FFFFFF;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 1180px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--gray-600);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+        }
+        
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.02em;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color 0.15s;
+        }
+        
+        .nav-link:hover { color: var(--black); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.15s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 14px;
+            background: var(--orange);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover { background: var(--orange-hover); }
+        
+        .btn-large {
+            padding: 14px 28px;
+            font-size: 15px;
+            background: var(--orange);
+            color: var(--white);
+            border-radius: 10px;
+        }
+        
+        .btn-large:hover { background: var(--orange-hover); }
+        
+        .btn-outline {
+            padding: 14px 28px;
+            font-size: 15px;
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid var(--gray-300);
+            border-radius: 10px;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--gray-400);
+            background: var(--gray-100);
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--black);
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            z-index: 999;
+            padding: 80px 24px 24px;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .mobile-nav.active { display: flex; }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--black);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .mobile-nav .btn-primary {
+            margin-top: 16px;
+            padding: 16px;
+            font-size: 16px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .menu-toggle { display: flex; }
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 24px 48px;
+            background: var(--white);
+            text-align: center;
+        }
+        
+        .hero-inner {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.08), rgba(255, 107, 44, 0.12));
+            border: 1px solid rgba(255, 77, 0, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+        
+        .status-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.8); }
+        }
+        
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 17px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .hero-stat {
+            text-align: center;
+        }
+        
+        .hero-stat-value {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-stat-value.accent { 
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-stat-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+        
+        @media (max-width: 600px) {
+            .hero { padding: 88px 20px 40px; }
+            .hero-stats { flex-direction: column; gap: 20px; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn { width: 100%; }
+        }
+        
+        /* Clients/Trust */
+        .clients {
+            padding: 32px 24px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-100);
+        }
+        
+        .clients-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .clients-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        
+        .clients-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .client-logo {
+            height: 28px;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            transition: all 0.2s;
+        }
+        
+        .client-logo:hover {
+            opacity: 0.8;
+            filter: grayscale(0%);
+        }
+        
+        .client-badge {
+            padding: 8px 16px;
+            background: var(--gray-100);
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .client-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-700);
+            padding: 10px 20px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .client-name:hover {
+            background: var(--white);
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        
+        @media (max-width: 600px) {
+            .clients { padding: 24px 20px; }
+            .clients-logos { gap: 24px; }
+        }
+        
+        /* Section */
+        .section {
+            padding: 48px 24px;
+        }
+        
+        .section-white { background: var(--white); }
+        .section-gray { background: var(--bg); }
+        .section-dark { background: var(--gray-900); }
+        
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            margin-bottom: 32px;
+        }
+        
+        .section-header.center { text-align: center; }
+        
+        .section-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+        
+        .section-header p {
+            font-size: 15px;
+            color: var(--gray-500);
+        }
+        
+        @media (max-width: 600px) {
+            .section { padding: 40px 20px; }
+            .section-header h2 { font-size: 24px; }
+        }
+        
+        /* Problems */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .problem-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 24px;
+            transition: all 0.25s ease;
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--orange), #FF6B2C);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            border-color: rgba(255, 77, 0, 0.2);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.1);
+            transform: translateX(4px);
+        }
+        
+        .problem-card:hover::after {
+            transform: scaleY(1);
+        }
+        
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.1), rgba(255, 107, 44, 0.15));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .problem-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--orange);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+        
+        .problem-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .problem-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 700px) {
+            .problems-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Approach */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .approach-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .approach-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), #FF6B2C);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .approach-card:hover {
+            border-color: rgba(255, 77, 0, 0.3);
+            box-shadow: 0 16px 40px rgba(255, 77, 0, 0.12);
+            transform: translateY(-6px);
+        }
+        
+        .approach-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .approach-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(255, 77, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .approach-card:hover .approach-icon {
+            transform: scale(1.1);
+        }
+        
+        .approach-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+        
+        .approach-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .approach-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 800px) {
+            .approach-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .process-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            transition: all 0.25s ease;
+            overflow: hidden;
+        }
+        
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), #FF6B2C);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-card:hover {
+            border-color: rgba(255, 77, 0, 0.25);
+            box-shadow: 0 16px 40px rgba(255, 77, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .process-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .process-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+        }
+        
+        .process-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+        
+        .process-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.65;
+        }
+        
+        @media (max-width: 700px) {
+            .process-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* CTA Note */
+        .cta-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        
+        /* Cases */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .case-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 14px;
+            padding: 24px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), #FF6B2C);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .case-card:hover {
+            border-color: rgba(255, 77, 0, 0.3);
+            box-shadow: 0 16px 40px rgba(255, 77, 0, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .case-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .case-tag {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 14px;
+        }
+        
+        .case-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+        
+        .case-card > p {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+        }
+        
+        .case-stats {
+            display: flex;
+            gap: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-100);
+            background: linear-gradient(180deg, transparent, rgba(255, 77, 0, 0.02));
+            margin: 0 -24px -24px;
+            padding: 16px 24px 20px;
+            border-radius: 0 0 14px 14px;
+        }
+        
+        .case-stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .case-stat-label {
+            font-size: 11px;
+            color: var(--gray-500);
+            margin-top: 2px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 900px) {
+            .cases-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .cases-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Value */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        
+        .value-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 14px;
+            padding: 24px 20px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), #FF6B2C);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            border-color: rgba(255, 77, 0, 0.25);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, rgba(255, 77, 0, 0.1), rgba(255, 107, 44, 0.15));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover .value-icon {
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+        }
+        
+        .value-card:hover .value-icon svg {
+            stroke: white;
+        }
+        
+        .value-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--orange);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            transition: stroke 0.3s ease;
+        }
+        
+        .value-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+        
+        .value-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 900px) {
+            .value-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 500px) {
+            .value-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* CTA Section - Premium B2B Style */
+        .cta-section {
+            padding: 70px 24px;
+            background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(255, 77, 0, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(255, 107, 44, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .cta-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-content h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        
+        .cta-content > p {
+            font-size: 17px;
+            color: var(--gray-400);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        
+        .cta-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-list-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .cta-list-item::before {
+            content: '✓';
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--orange), #FF6B2C);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .cta-contacts {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .cta-contact {
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #FFFFFF;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .cta-contact:hover { 
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        .cta-contact span { color: var(--orange); font-weight: 700; }
+        
+        .cta-form-card {
+            background: linear-gradient(145deg, var(--orange), #FF6B2C);
+            border-radius: 24px;
+            padding: 36px;
+            box-shadow: 0 32px 64px rgba(255, 77, 0, 0.3);
+        }
+        
+        .cta-form-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .cta-form-subtitle {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .cta-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .cta-input {
+            width: 100%;
+            padding: 18px 22px;
+            border: 2px solid transparent;
+            border-radius: 14px;
+            font-size: 16px;
+            font-family: var(--font);
+            background: var(--white);
+            transition: all 0.2s;
+        }
+        
+        .cta-input:focus {
+            outline: none;
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-input::placeholder { color: var(--gray-400); }
+        
+        .cta-phone-row {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .cta-flag {
+            width: 60px;
+            padding: 18px;
+            background: var(--white);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .cta-phone-row .cta-input { flex: 1; }
+        
+        .cta-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        
+        .cta-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #0D0D0D;
+        }
+        
+        .cta-checkbox label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        
+        .cta-submit {
+            width: 100%;
+            padding: 20px;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--font);
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-submit:hover { 
+            background: var(--gray-800);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        @media (max-width: 1000px) {
+            .cta-section { padding: 80px 20px; }
+            .cta-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 48px;
+            }
+            .cta-content h2 { font-size: 36px; }
+            .cta-content > p { font-size: 18px; }
+            .cta-list { align-items: center; }
+            .cta-contacts { justify-content: center; flex-wrap: wrap; }
+            .cta-form-card { 
+                max-width: 480px; 
+                margin: 0 auto;
+                padding: 40px 32px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .cta-content h2 { font-size: 28px; }
+            .cta-form-card { padding: 32px 24px; }
+            .cta-input { padding: 16px 18px; }
+        }
+        
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--gray-900);
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            transition: color 0.2s;
+        }
+        
+        .faq-question:hover {
+            color: var(--orange);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            color: var(--orange);
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+        
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question { font-size: 15px; padding: 20px 0; }
+            .faq-answer p { font-size: 14px; }
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active { display: flex; }
+        
+        .modal {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: var(--gray-100);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--gray-500);
+            transition: all 0.15s;
+        }
+        
+        .modal-close:hover { background: var(--gray-200); color: var(--black); }
+        
+        .modal h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+            padding-right: 36px;
+        }
+        
+        .modal-subtitle {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: var(--font);
+            transition: border-color 0.15s;
+        }
+        
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--orange);
+        }
+        
+        .modal-input::placeholder { color: var(--gray-400); }
+        
+        .modal-phone-row {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .modal-flag {
+            width: 44px;
+            padding: 12px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .modal-phone-row .modal-input { flex: 1; }
+        
+        .modal-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .modal-checkbox input {
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--orange);
+        }
+        
+        .modal-checkbox label {
+            font-size: 11px;
+            color: var(--gray-500);
+            line-height: 1.4;
+            cursor: pointer;
+        }
+        
+        .modal-submit {
+            width: 100%;
+            padding: 12px;
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: var(--font);
+            cursor: pointer;
+            transition: background 0.15s;
+            margin-top: 4px;
+        }
+        
+        .modal-submit:hover { background: var(--orange-hover); }
+        
+        /* Telegram Popup */
+        .tg-popup {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            max-width: 320px;
+            z-index: 1500;
+            animation: slideUp 0.3s ease;
+        }
+        
+        .tg-popup.active { display: block; }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tg-popup-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: var(--gray-100);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: var(--gray-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tg-popup-close:hover { background: var(--gray-200); }
+        
+        .tg-popup-icon {
+            width: 40px;
+            height: 40px;
+            background: #0088cc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+        
+        .tg-popup-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+        
+        .tg-popup h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 6px;
+            padding-right: 24px;
+        }
+        
+        .tg-popup p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+        
+        .tg-popup-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        
+        .tg-popup-btn:hover { background: #0077b5; }
+        
+        @media (max-width: 600px) {
+            .tg-popup {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                max-width: none;
+            }
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px 24px 24px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+        
+        .footer-brand p {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--gray-500);
+            max-width: 260px;
+            line-height: 1.6;
+        }
+        
+        .footer-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-link {
+            font-size: 13px;
+            color: var(--gray-600);
+            transition: color 0.15s;
+        }
+        
+        .footer-link:hover { color: var(--orange); }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 12px;
+            color: var(--gray-400);
+        }
+        
+        @media (max-width: 800px) {
+            .footer { padding: 32px 20px 20px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+        
+        /* Section CTA */
+        .section-cta {
+            text-align: center;
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="uslugi/" class="nav-link">Услуги</a>
+                <a href="kejsy/" class="nav-link">Кейсы</a>
+                <a href="o-nas/" class="nav-link">О нас</a>
+                <a href="blog/" class="nav-link">Блог</a>
+                <a href="kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Меню" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="uslugi/" class="mobile-nav-link">Услуги</a>
+        <a href="kejsy/" class="mobile-nav-link">Кейсы</a>
+        <a href="o-nas/" class="mobile-nav-link">О нас</a>
+        <a href="blog/" class="mobile-nav-link">Блог</a>
+        <a href="kontakty/" class="mobile-nav-link">Контакты</a>
+        <button class="btn btn-primary" onclick="openModal(); toggleMobileNav();">Обсудить проект</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="status-badge">Один из лидеров в персонализированном B2B-аутриче</div>
+            <h1>Превращаем холодные контакты в <span>горячие встречи</span> с ЛПРами</h1>
+            
+            <p class="hero-subtitle">
+                Персонализированный B2B-аутрич через Telegram, Email и LinkedIn. 
+                Выводим вас на диалог с теми, кто принимает решения.
+            </p>
+            
+            <div class="hero-cta">
+                <button class="btn btn-large" onclick="openModal()">Обсудить проект</button>
+                <a href="kejsy/" class="btn btn-outline">Смотреть кейсы</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value accent">500+</div>
+                    <div class="hero-stat-label">встреч с ЛПРами</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">80+</div>
+                    <div class="hero-stat-label">успешных кампаний</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value accent">340%</div>
+                    <div class="hero-stat-label">средний ROI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Clients Trust -->
+    <section class="clients">
+        <div class="clients-inner">
+            <div class="clients-label">Нам доверяют</div>
+            <div class="clients-logos">
+                <span class="client-name">dmp.one</span>
+                <span class="client-name">JOBSKI</span>
+                <span class="client-name">Lerna</span>
+                <span class="client-name">Finboo</span>
+                <span class="client-name">NDCore</span>
+                <span class="client-name">WikiLect</span>
+                <span class="client-name">IThub</span>
+                <span class="client-name">Rechka AI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="section section-gray">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Проблемы традиционного B2B-маркетинга</h2>
+                <p>С чем сталкиваются компании при поиске клиентов</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                    </div>
+                    <h3>Нецелевые контакты</h3>
+                    <p>Каналы приводят объём, но ЛПРы составляют малую долю. Много лидов — мало сделок.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>Высокая стоимость привлечения</h3>
+                    <p>SEO и реклама требуют времени и бюджетов до первых результатов. CAC растёт.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                    </div>
+                    <h3>Отсутствие управляемости</h3>
+                    <p>Нет прогнозируемого потока встреч. Сложно планировать продажи.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3>Низкая персонализация</h3>
+                    <p>Универсальные сообщения не попадают в контекст задач ЛПРов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section section-white">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Наш подход: прямой выход на ЛПР</h2>
+                <p>Выводим на диалог с теми, кто принимает решения</p>
+            </div>
+            
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3>Персонализированный аутрич</h3>
+                    <p>Каждое сообщение — под конкретную компанию, роль и актуальную задачу ЛПРа.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>Качественные диалоги</h3>
+                    <p>Общаемся напрямую с ЛПРами и доводим диалог до релевантной встречи.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+                    </div>
+                    <h3>Минимум 20 встреч</h3>
+                    <p>Гарантируем не менее 20 встреч с целевыми ЛПРами каждый месяц.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-gray">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Как мы работаем</h2>
+                <p>Системный подход, который даёт результат в любой B2B-нише</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Глубокий анализ ЦА</h3>
+                    <p>Определяем портрет клиента (ICP), сегментируем базу, находим триггеры для персонализации.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Прямой выход на ЛПР</h3>
+                    <p>Используем Telegram, Email и LinkedIn для установления контакта с лицами, принимающими решения.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Персонализация</h3>
+                    <p>Каждое сообщение пишется индивидуально с учётом специфики бизнеса и потребностей ЛПРа.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Доведение до встречи</h3>
+                    <p>Ведём диалог, отвечаем на возражения и организуем встречи с заинтересованными клиентами.</p>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <button class="btn btn-large" onclick="openModal()">Обсудить проект</button>
+                <p class="cta-note">Без обязательств. Если не подойдём — честно скажем.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases -->
+    <section class="section section-white">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Результаты клиентов</h2>
+                <p>Избранные кейсы из разных отраслей</p>
+            </div>
+            
+            <div class="cases-grid">
+                <a href="kejsy/dmp-one-telegram-outreach.html" class="case-card">
+                    <span class="case-tag">MarTech / SaaS</span>
+                    <h3>dmp.one</h3>
+                    <p>Сервис идентификации лидов</p>
+                    <div class="case-stats">
+                        <div>
+                            <div class="case-stat-value">27</div>
+                            <div class="case-stat-label">встреч</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">8</div>
+                            <div class="case-stat-label">продаж</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">63%</div>
+                            <div class="case-stat-label">reply rate</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="kejsy/jobski-hrtech-telegram.html" class="case-card">
+                    <span class="case-tag">HRTech</span>
+                    <h3>JOBSKI</h3>
+                    <p>Сервис поиска персонала</p>
+                    <div class="case-stats">
+                        <div>
+                            <div class="case-stat-value">27</div>
+                            <div class="case-stat-label">встреч</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">11</div>
+                            <div class="case-stat-label">клиентов</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">41%</div>
+                            <div class="case-stat-label">конверсия</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="kejsy/rechka-ai-legaltech-obuchenie.html" class="case-card">
+                    <span class="case-tag">AI / LegalTech</span>
+                    <h3>Rechka AI</h3>
+                    <p>AI для юридических документов</p>
+                    <div class="case-stats">
+                        <div>
+                            <div class="case-stat-value">20+</div>
+                            <div class="case-stat-label">встреч/мес</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">6</div>
+                            <div class="case-stat-label">клиентов</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-value">100%</div>
+                            <div class="case-stat-label">автономно</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="section-cta">
+                <a href="kejsy/" class="btn btn-outline">Все кейсы →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value -->
+    <section class="section section-gray">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Что вы получаете</h2>
+                <p>Берём процесс на себя — на выходе предсказуемый поток встреч</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    </div>
+                    <h4>ЛПРы с потребностью</h4>
+                    <p>Ищем тех, у кого есть боль: вакансии, расширение, внедрения.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h4>Сообщения, которые читают</h4>
+                    <p>Персонализированные тексты под ситуацию компании.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+                    </div>
+                    <h4>Доставляемость</h4>
+                    <p>Домены, DNS, прогрев — всё настроено для inbox.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h4>Диалоги до встречи</h4>
+                    <p>Ведём переписку до конкретного «давайте созвонимся».</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white">
+        <div class="section-inner">
+            <div class="section-header center">
+                <h2>Частые вопросы</h2>
+                <p>Отвечаем на популярные вопросы о работе с нами</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Как вы гарантируете результат?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы гарантируем минимум 20 встреч с ЛПРами за период сотрудничества. Если не достигаем KPI — работаем бесплатно до результата или возвращаем деньги. Это прописано в договоре.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Сколько времени нужно до первых встреч?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Первые встречи появляются через 7–14 дней после старта. За это время мы анализируем нишу, собираем базу ЛПРов, настраиваем инфраструктуру и запускаем первые кампании.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Какие каналы вы используете?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Основной канал — Telegram (80% наших кампаний). Также работаем с Email и LinkedIn в зависимости от ниши и географии целевой аудитории. Выбираем канал, где ваши ЛПРы наиболее активны.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Чем вы отличаетесь от обычных лидогенераторов?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы не продаём базы и не делаем массовые рассылки. Каждое сообщение пишется вручную под конкретного ЛПРа. Мы ведём диалог до момента, когда собеседник готов к встрече, а не просто «передаём лид».</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Какой средний reply rate в ваших кампаниях?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Средний reply rate — 47% в Telegram и 25–35% в Email. Это достигается за счёт точного таргетинга и глубокой персонализации каждого сообщения под контекст компании и задачи ЛПРа.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Можно ли обучить нашу команду делать аутрич самостоятельно?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, у нас есть формат обучения. За 4–6 недель мы передаём методологию, настраиваем инфраструктуру и обучаем вашу команду. После обучения команда работает автономно и генерирует встречи самостоятельно.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner">
+            <div class="cta-content">
+                <h2>Обсудим ваш проект?</h2>
+                <p>На 15-минутном созвоне разберём вашу задачу и предложим решение.</p>
+                
+                <div class="cta-list">
+                    <div class="cta-list-item">Оценим реалистичность выхода на ЛПР в вашей нише</div>
+                    <div class="cta-list-item">Подберём формат: под ключ или обучение команды</div>
+                    <div class="cta-list-item">Составим конкретный план первых шагов</div>
+                </div>
+                
+                <div class="cta-contacts">
+                    <a href="mailto:daniil@leadspikers.com" class="cta-contact">
+                        📧 <span>daniil@leadspikers.com</span>
+                    </a>
+                    <a href="https://t.me/leadspikers_info" target="_blank" class="cta-contact">
+                        💬 <span>@leadspikers_info</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="cta-form-card">
+                <h3 class="cta-form-title">Оставьте заявку</h3>
+                <p class="cta-form-subtitle">Ответим в течение 15 минут в рабочее время</p>
+                
+                <form class="cta-form" onsubmit="handleCTASubmit(event)">
+                    <input type="text" class="cta-input" placeholder="Ваше имя" required>
+                    <input type="email" class="cta-input" placeholder="Email" required>
+                    <div class="cta-phone-row">
+                        <div class="cta-flag">RU</div>
+                        <input type="tel" class="cta-input" placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <input type="text" class="cta-input" placeholder="Telegram (@username или ссылка)">
+                    
+                    <div class="cta-checkbox">
+                        <input type="checkbox" id="cta-consent" checked required>
+                        <label for="cta-consent">
+                            Отправляя заявку, вы даёте согласие на обработку персональных данных
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="cta-submit">Обсудить проект →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич. Выводим на диалог с теми, кто принимает решения.</p>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="uslugi/b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="uslugi/obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="kejsy/" class="footer-link">Кейсы</a>
+                        <a href="o-nas/" class="footer-link">О нас</a>
+                        <a href="blog/" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="mailto:daniil@leadspikers.com" class="footer-link">daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2026 Leadspikers. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Обсудить проект</h2>
+            <p class="modal-subtitle">Оставьте заявку — свяжемся в течение дня</p>
+            
+            <form class="modal-form" onsubmit="handleSubmit(event)">
+                <input type="text" class="modal-input" placeholder="Имя" required>
+                <input type="email" class="modal-input" placeholder="Email" required>
+                <div class="modal-phone-row">
+                    <div class="modal-flag">🇷🇺</div>
+                    <input type="tel" class="modal-input" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <input type="text" class="modal-input" placeholder="Telegram (@username или ссылка)">
+                
+                <div class="modal-checkbox">
+                    <input type="checkbox" id="consent" checked required>
+                    <label for="consent">
+                        Отправляя заявку, вы даёте согласие на обработку персональных данных
+                    </label>
+                </div>
+                
+                <button type="submit" class="modal-submit">Обсудить проект</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Telegram Popup -->
+    <div class="tg-popup" id="tgPopup">
+        <button class="tg-popup-close" onclick="closeTgPopup()">×</button>
+        <div class="tg-popup-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </div>
+        <h4>Кейсы и практика B2B-аутрича</h4>
+        <p>Инсайты, примеры сообщений и разборы кампаний — в нашем Telegram-канале.</p>
+        <a href="https://t.me/leadspikers" target="_blank" class="tg-popup-btn">Подписаться на канал</a>
+    </div>
+
+    <script>
+        // Mobile navigation
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.menu-toggle');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        // Modal
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            closeModal();
+        }
+        
+        function handleCTASubmit(event) {
+            event.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Telegram Popup
+        function closeTgPopup() {
+            document.getElementById('tgPopup').classList.remove('active');
+            localStorage.setItem('tgPopupClosed', Date.now());
+        }
+        
+        function showTgPopup() {
+            const lastClosed = localStorage.getItem('tgPopupClosed');
+            const sevenDays = 7 * 24 * 60 * 60 * 1000;
+            
+            if (lastClosed && (Date.now() - parseInt(lastClosed)) < sevenDays) {
+                return;
+            }
+            
+            document.getElementById('tgPopup').classList.add('active');
+        }
+        
+        // Show popup after 15 seconds or 50% scroll
+        let popupShown = false;
+        
+        setTimeout(function() {
+            if (!popupShown) {
+                showTgPopup();
+                popupShown = true;
+            }
+        }, 15000);
+        
+        window.addEventListener('scroll', function() {
+            if (popupShown) return;
+            
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 50) {
+                showTgPopup();
+                popupShown = true;
+            }
+        });
+    </script>
+</body>
+</html>

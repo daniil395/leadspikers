@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кейс XWAY: обучение команды из 5 человек B2B-аутричу. 12 встреч за первый месяц работы, команда работает как мини-агентство внутри компании.">
+    <meta name="keywords" content="обучение аутричу, кейс XWAY, B2B аутрич маркетплейсы, лидогенерация для ecommerce, внутренний отдел продаж">
+    
+    <title>XWAY: запуск внутреннего аутрич-отдела за месяц — Кейс Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "XWAY: запуск внутреннего аутрич-отдела для продавцов маркетплейсов",
+        "author": {
+            "@type": "Organization",
+            "name": "Leadspikers"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Leadspikers"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="../uslugi/" class="nav-link">Услуги</a>
+                <a href="./" class="nav-link active">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="../blog/" class="nav-link">Блог</a>
+                <a href="../kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero кейса -->
+    <section class="case-hero">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../" class="breadcrumb-link">Главная</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="./" class="breadcrumb-link">Кейсы</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">XWAY</span>
+            </nav>
+            
+            <div class="case-hero-meta">
+                <span class="case-hero-tag">🎓 Обучение команды</span>
+                <span class="case-hero-tag">eCommerce / Маркетплейсы</span>
+            </div>
+            
+            <h1>Запуск внутреннего B2B-аутрич отдела: как обучили команду из 5 человек с нуля</h1>
+            
+            <div class="case-hero-highlight">
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">5</div>
+                    <div class="case-hero-stat-label">человек обучено</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">12</div>
+                    <div class="case-hero-stat-label">встреч за 1-й месяц</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">1</div>
+                    <div class="case-hero-stat-label">встреча уже на обучении</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">100%</div>
+                    <div class="case-hero-stat-label">автономность</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании и рынке -->
+    <section class="case-section">
+        <div class="container">
+            <h2>О компании и рынке</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">О клиенте</h4>
+                    <p>
+                        XWAY — сервис решений для продавцов на маркетплейсах. 
+                        Компания помогает селлерам оптимизировать работу с Ozon, Wildberries и другими площадками.
+                    </p>
+                    <p>
+                        Целевая аудитория — владельцы магазинов на маркетплейсах с оборотом от нескольких миллионов рублей, 
+                        которые ищут инструменты для роста и автоматизации.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">Контекст рынка</h4>
+                    <p>
+                        Рынок маркетплейсов в России растёт взрывными темпами. Сотни тысяч продавцов конкурируют за покупателей 
+                        и ищут инструменты для увеличения продаж и оптимизации операций.
+                    </p>
+                    <p>
+                        При этом селлеры активны в Telegram: там они обсуждают рабочие вопросы, 
+                        делятся опытом и принимают решения о новых инструментах.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бизнес-задача клиента -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Бизнес-задача клиента</h2>
+            
+            <div class="card card-accent" style="max-width: 800px;">
+                <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
+                    Создать внутренний аутрич-отдел, который будет самостоятельно привлекать продавцов на маркетплейсах. 
+                    Команда должна работать как мини-агентство внутри компании.
+                </p>
+                
+                <div class="grid grid-2" style="gap: var(--space-lg);">
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: var(--space-sm);">Целевая аудитория</h4>
+                        <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <li style="margin-bottom: var(--space-xs);">• Владельцы магазинов на маркетплейсах</li>
+                            <li style="margin-bottom: var(--space-xs);">• Селлеры с оборотом от 3 млн/мес</li>
+                            <li>• Руководители eCommerce-направлений</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: var(--space-sm);">Цели обучения</h4>
+                        <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <li style="margin-bottom: var(--space-xs);">• Обучить команду с нуля</li>
+                            <li style="margin-bottom: var(--space-xs);">• Построить автономный процесс</li>
+                            <li>• Масштабировать на новые сегменты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проблема и ограничения -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Проблема и ограничения</h2>
+            
+            <p class="section-subtitle">
+                Исходная ситуация XWAY перед запуском обучения
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="problem-card">
+                    <h3>Отсутствие экспертизы</h3>
+                    <p>В команде не было специалистов с опытом B2B-аутрича. Нужно было обучить людей с нуля: от поиска ЛПРов до ведения переговоров.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Специфичная ЦА</h3>
+                    <p>Продавцы на маркетплейсах — особая аудитория. Они перегружены предложениями и скептически относятся к новым инструментам.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Потребность в масштабировании</h3>
+                    <p>Компания растёт и нужен канал, который можно масштабировать: добавлять людей, выходить на новые сегменты.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Зависимость от входящих</h3>
+                    <p>До этого продажи строились на входящих лидах. Нужен был исходящий канал для предсказуемого роста.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Решение Leadspikers -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Решение Leadspikers</h2>
+            
+            <p class="section-subtitle">
+                Комплексное обучение команды B2B-аутричу
+            </p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Анализ ЦА</h3>
+                    <p>Сегментация продавцов по обороту, категориям товаров и проблемам. Определение критериев идеального клиента для XWAY.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">✏️</div>
+                    <h3>Обучение персонализации</h3>
+                    <p>Техники написания сообщений для разных сегментов аудитории. Как выделиться среди потока предложений селлерам.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon blue">💬</div>
+                    <h3>Ведение диалога</h3>
+                    <p>Сценарии ответов на возражения и доведение до встречи. Как работать с «мне не интересно» и «у нас всё есть».</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-2 mt-2xl">
+                <div class="card">
+                    <div class="card-icon purple">📊</div>
+                    <h3>Практическое закрепление</h3>
+                    <p>Получение первых результатов под руководством наставника. Первая встреча назначена уже в процессе обучения.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon orange">📈</div>
+                    <h3>Система аналитики</h3>
+                    <p>Создание метрик для отслеживания эффективности команды. Что измерять и как оптимизировать процесс.</p>
+                </div>
+            </div>
+            
+            <div class="card card-accent mt-2xl" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h4 style="color: var(--orange); margin-bottom: var(--space-md);">Особенность проекта</h4>
+                <p style="font-size: var(--font-size-lg); margin: 0;">
+                    Создание полностью автономной команды, работающей как мини-агентство внутри компании. 
+                    Привлекают клиентов для всех отделов XWAY.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каналы и механика аутрича -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Программа обучения</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Структура обучения</h4>
+                    
+                    <div class="service-feature" style="margin-bottom: var(--space-md);">
+                        <div class="service-feature-icon">1️⃣</div>
+                        <div>
+                            <h4>Поиск ЛПРов</h4>
+                            <p>Где искать продавцов на маркетплейсах, как определять оборот и категории, как находить контакты.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-feature" style="margin-bottom: var(--space-md);">
+                        <div class="service-feature-icon">2️⃣</div>
+                        <div>
+                            <h4>Написание сообщений</h4>
+                            <p>Персонализация под разные сегменты, работа с триггерами, структура первого касания.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-feature">
+                        <div class="service-feature-icon">3️⃣</div>
+                        <div>
+                            <h4>Ведение переговоров</h4>
+                            <p>Работа с возражениями, доведение до встречи, передача лида в отдел продаж.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Что получила команда</h4>
+                    
+                    <ul style="color: var(--text-secondary);">
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Методология поиска и квалификации селлеров
+                        </li>
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Шаблоны сообщений под разные сегменты
+                        </li>
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Скрипты обработки возражений
+                        </li>
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Система метрик и KPI
+                        </li>
+                        <li style="padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Документация для онбординга новых сотрудников
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Результаты кампании -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Результаты обучения</h2>
+            
+            <p class="section-subtitle">
+                Показатели команды XWAY после обучения
+            </p>
+            
+            <div class="grid grid-4">
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--orange);">5</div>
+                    <h4>Человек обучено</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">с нуля</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--green);">12</div>
+                    <h4>Встреч</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">за первый месяц работы</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--blue);">1</div>
+                    <h4>Встреча на обучении</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">уже в процессе</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--purple);">100%</div>
+                    <h4>Автономность</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">команда работает сама</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--space-2xl); color: var(--text-muted); font-size: var(--font-size-sm);">
+                * Для XWAY мы проводим ежеквартальный аудит системы аутрича для поддержания эффективности
+            </p>
+        </div>
+    </section>
+
+    <!-- Текущий статус -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Текущий статус команды</h2>
+            
+            <p class="section-subtitle">
+                Как работает внутренний аутрич-отдел XWAY сегодня
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-icon green">✓</div>
+                    <h3>Самостоятельный выход на ЛПРов</h3>
+                    <p>Команда самостоятельно выходит на владельцев магазинов на маркетплейсах, без внешней помощи и контроля.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">✓</div>
+                    <h3>Мини-агентство внутри</h3>
+                    <p>Работают как внутреннее агентство, привлекая клиентов для всех отделов компании: продукт, поддержка, премиум.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">✓</div>
+                    <h3>Автоматизация процессов</h3>
+                    <p>Полностью автоматизирован процесс поиска, взаимодействия и аналитики. Команда знает свои метрики и оптимизирует.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">✓</div>
+                    <h3>Масштабирование</h3>
+                    <p>Самостоятельно масштабируют методику на новые сегменты и рынки. Документация позволяет быстро онбордить новых людей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кому подойдёт такой подход -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Кому подойдёт такой подход</h2>
+            
+            <p class="section-subtitle">
+                Обучение команды для создания внутреннего аутрич-отдела
+            </p>
+            
+            <div class="audience-tags mb-2xl">
+                <span class="audience-tag">eCommerce / Маркетплейсы</span>
+                <span class="audience-tag">SaaS для селлеров</span>
+                <span class="audience-tag">ЦА: владельцы магазинов</span>
+                <span class="audience-tag">Команда 3-10 человек</span>
+                <span class="audience-tag">Рынок: Россия и СНГ</span>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card card-accent">
+                    <h4 style="color: var(--green); margin-bottom: var(--space-md);">✓ Подойдёт, если:</h4>
+                    <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-sm);">• Хотите создать внутренний отдел лидогенерации</li>
+                        <li style="margin-bottom: var(--space-sm);">• Есть 3-10 человек, готовых учиться</li>
+                        <li style="margin-bottom: var(--space-sm);">• Планируете масштабировать продажи</li>
+                        <li>• Ваша ЦА активна в digital-каналах</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--text-muted); margin-bottom: var(--space-md);">✗ Не подойдёт, если:</h4>
+                    <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-sm);">• Нет ресурсов на обучение команды</li>
+                        <li style="margin-bottom: var(--space-sm);">• Нужен разовый результат без построения системы</li>
+                        <li style="margin-bottom: var(--space-sm);">• Команда перегружена текущими задачами</li>
+                        <li>• Предпочитаете полностью делегировать продажи</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            
+            <div style="max-width: 800px;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько длится обучение?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Базовое обучение занимает 2-3 недели с практическими сессиями. За это время команда получает первые результаты и закрепляет навыки. После этого — поддержка и периодические аудиты.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли обучить одного человека?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Можно, но мы рекомендуем минимум 2-3 человек. Это снижает риски (отпуск, болезнь, увольнение) и позволяет обмениваться опытом внутри команды.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что входит в ежеквартальный аудит?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Анализ метрик команды, разбор сложных кейсов, оптимизация скриптов и процессов, адаптация под изменения рынка. Помогаем поддерживать и улучшать результаты.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Подойдёт ли для других ниш, не только маркетплейсов?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, методология адаптируется под любую B2B-нишу. Ключевое — понимание болей ЦА и наличие ЛПРов в digital-каналах. Мы подстраиваем программу под вашу специфику.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Какие инструменты нужны для работы?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Минимальный набор: Telegram, таблицы для ведения базы, CRM для передачи лидов. Расскажем о дополнительных инструментах для автоматизации и аналитики.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 20% 50%, rgba(255, 77, 0, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255, 107, 44, 0.1) 0%, transparent 50%);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 36px; font-weight: 800; color: #FFFFFF; margin-bottom: 20px; line-height: 1.2;">Обсудим ваш проект?</h2>
+                    <p style="font-size: 18px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.7;">
+                        На 15-минутном созвоне разберём вашу задачу и предложим решение.
+                    </p>
+                    <ul style="list-style: none; margin: 0 0 32px 0; padding: 0;">
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Оценим реалистичность выхода на ЛПР в вашей нише</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Подберём формат: под ключ или обучение команды</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px;"><span style="color: #FF4D00;">✓</span> Составим конкретный план первых шагов</li>
+                    </ul>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="mailto:daniil@leadspikers.com" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">📧 daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">💬 @leadspikers_info</a>
+                    </div>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #FF4D00, #FF6B2C); border-radius: 24px; padding: 40px; box-shadow: 0 24px 48px rgba(255, 77, 0, 0.3);">
+                    <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;" style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 4px;">
+                            <input type="checkbox" checked required style="margin-top: 2px;">
+                            Отправляя заявку, вы даёте согласие на обработку персональных данных
+                        </label>
+                        <button type="submit" style="width: 100%; padding: 18px; background: #0D0D0D; color: #FFFFFF; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.3s;">Обсудить проект</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич под ключ. Превращаем холодные контакты в горячие встречи с ЛПРами.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="../uslugi/b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="../uslugi/obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="./" class="footer-link">Кейсы</a>
+                        <a href="../o-nas/" class="footer-link">О нас</a>
+                        <a href="../blog/" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="https://t.me/leadspikers_info" class="footer-link" target="_blank">Telegram</a>
+                        <a href="../kontakty/" class="footer-link">Все контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Leadspikers. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

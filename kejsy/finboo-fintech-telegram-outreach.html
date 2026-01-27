@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кейс Finboo: 19 встреч с финансовыми директорами через Telegram-аутрич. B2B лидогенерация для FinTech от Leadspikers.">
+    <meta name="keywords" content="B2B аутрич FinTech, кейс Finboo, Telegram аутрич финтех, лидогенерация финансы">
+    
+    <title>Finboo: 19 встреч через Telegram — Кейс Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Finboo: 19 встреч через Telegram — Кейс B2B-аутрича",
+        "author": { "@type": "Organization", "name": "Leadspikers" },
+        "publisher": { "@type": "Organization", "name": "Leadspikers" }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-light: #FF6B2C;
+            --orange-dark: #E04500;
+            --orange-glow: rgba(255, 77, 0, 0.12);
+            --orange-subtle: rgba(255, 77, 0, 0.06);
+            
+            --black: #0A0A0A;
+            --gray-900: #171717;
+            --gray-800: #262626;
+            --gray-700: #404040;
+            --gray-600: #525252;
+            --gray-500: #737373;
+            --gray-400: #A3A3A3;
+            --gray-300: #D4D4D4;
+            --gray-200: #E5E5E5;
+            --gray-100: #F5F5F5;
+            --gray-50: #FAFAFA;
+            --white: #FFFFFF;
+            
+            --green: #10B981;
+            --blue: #3B82F6;
+            --purple: #8B5CF6;
+            
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --max-width: 1200px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--gray-700);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .nav-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color var(--transition);
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--black);
+        }
+        
+        .nav-link.active::after, .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.3);
+            font-weight: 700;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--gray-200);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        
+        @media (max-width: 900px) {
+            .nav { display: none; }
+        }
+        
+        /* Case Hero */
+        .case-hero {
+            padding: 160px 32px 80px;
+            background: var(--white);
+        }
+        
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        
+        .breadcrumb-link {
+            color: var(--gray-500);
+            transition: color var(--transition);
+        }
+        
+        .breadcrumb-link:hover {
+            color: var(--orange);
+        }
+        
+        .breadcrumb-current {
+            color: var(--black);
+            font-weight: 500;
+        }
+        
+        .case-hero-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .case-hero-tag {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--orange-subtle);
+            border: 1px solid rgba(255, 77, 0, 0.2);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--orange);
+        }
+        
+        .case-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 48px;
+        }
+        
+        .case-hero-highlight {
+            display: flex;
+            gap: 48px;
+            padding: 40px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+        }
+        
+        .case-hero-stat {
+            text-align: left;
+        }
+        
+        .case-hero-stat-value {
+            font-size: 52px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        
+        .case-hero-stat-label {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        
+        /* Case Section */
+        .case-section {
+            padding: 80px 32px;
+        }
+        
+        .case-section.bg-gray {
+            background: var(--gray-50);
+        }
+        
+        .case-section h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+        }
+        
+        .case-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        
+        .case-section p {
+            font-size: 17px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-500);
+            margin-bottom: 40px;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 32px;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        @media (max-width: 900px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all var(--transition);
+        }
+        
+        .card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .card-accent {
+            border-color: var(--orange);
+            background: var(--orange-subtle);
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--orange-subtle);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .card-icon.green { background: rgba(16, 185, 129, 0.1); color: var(--green); }
+        .card-icon.blue { background: rgba(59, 130, 246, 0.1); color: var(--blue); }
+        
+        .card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        .problem-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all var(--transition);
+        }
+        
+        .problem-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+        }
+        
+        .problem-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .problem-card p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 32px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            transition: all var(--transition);
+        }
+        
+        .value-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+        }
+        
+        .value-card .stat-value {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        
+        .value-card .stat-value.green {
+            background: var(--green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .value-card .stat-value.blue {
+            background: var(--blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .value-card .stat-value.purple {
+            background: var(--purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .value-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .value-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 0;
+        }
+        
+        .service-feature {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            transition: all var(--transition);
+        }
+        
+        .service-feature:hover {
+            border-color: var(--orange);
+        }
+        
+        .service-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--orange-subtle);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .service-feature h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .service-feature p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        .audience-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        
+        .audience-tag {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            transition: all var(--transition);
+        }
+        
+        .audience-tag:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 28px 0;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+            text-align: left;
+            cursor: pointer;
+            transition: color var(--transition);
+            font-family: var(--font);
+        }
+        
+        .faq-question:hover {
+            color: var(--orange);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            color: var(--orange);
+            transition: transform var(--transition);
+            font-weight: 300;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 28px;
+        }
+        
+        .faq-answer p {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 80px 32px;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        .cta-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        @media (max-width: 900px) {
+            .cta-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        .cta-text h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-text p {
+            font-size: 18px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+        
+        .cta-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .cta-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 24px;
+        }
+        
+        .cta-qr {
+            margin-bottom: 20px;
+        }
+        
+        .cta-qr img {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+        }
+        
+        .cta-handle {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 8px;
+        }
+        
+        .cta-response {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 80px 32px 40px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 64px;
+            margin-bottom: 64px;
+        }
+        
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+        
+        .footer-brand p {
+            margin-top: 20px;
+            font-size: 15px;
+            color: var(--gray-500);
+            max-width: 300px;
+            line-height: 1.7;
+        }
+        
+        .footer-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-link {
+            font-size: 15px;
+            color: var(--gray-600);
+            transition: color var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--gray-600);
+            transition: all var(--transition);
+        }
+        
+        .modal-close:hover {
+            background: var(--gray-200);
+            color: var(--black);
+        }
+        
+        .modal h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+        
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: var(--font);
+            color: var(--black);
+            transition: all var(--transition);
+        }
+        
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.1);
+        }
+        
+        .modal-phone-wrapper {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .modal-phone-flag {
+            width: 60px;
+            padding: 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .modal-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .modal-checkbox input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--orange);
+        }
+        
+        .modal-checkbox label {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        .modal-submit {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font);
+        }
+        
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.3);
+        }
+
+        .check-list li {
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+            color: var(--gray-600);
+            font-size: 16px;
+        }
+        
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            <nav class="nav">
+                <a href="../uslugi/" class="nav-link">Услуги</a>
+                <a href="./" class="nav-link active">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="../blog/" class="nav-link">Блог</a>
+                <a href="../kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="case-hero">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../" class="breadcrumb-link">Главная</a>
+                <span>/</span>
+                <a href="./" class="breadcrumb-link">Кейсы</a>
+                <span>/</span>
+                <span class="breadcrumb-current">Finboo</span>
+            </nav>
+            
+            <div class="case-hero-meta">
+                <span class="case-hero-tag">📱 Telegram</span>
+                <span class="case-hero-tag">FinTech</span>
+            </div>
+            
+            <h1>Лидогенерация для FinTech: как Finboo получил 19 встреч с CFO через персонализированный Telegram-аутрич</h1>
+            
+            <div class="case-hero-highlight">
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">19</div>
+                    <div class="case-hero-stat-label">встреч с CFO</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">4</div>
+                    <div class="case-hero-stat-label">продажи</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">52%</div>
+                    <div class="case-hero-stat-label">reply rate</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">290%</div>
+                    <div class="case-hero-stat-label">ROI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="container">
+            <h2>О компании и рынке</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4>О клиенте</h4>
+                    <p>
+                        Finboo — сервис автоматизации финансовой отчётности для среднего бизнеса. 
+                        Платформа помогает компаниям сократить время на подготовку управленческой отчётности 
+                        и получать актуальные данные о финансовом состоянии в режиме реального времени.
+                    </p>
+                    <p>
+                        Основная аудитория — компании с оборотом от 500 млн рублей, которым требуется 
+                        консолидация данных из разных источников и автоматизация рутинных финансовых операций.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Контекст рынка</h4>
+                    <p>
+                        Рынок FinTech B2B в России переживает активный рост. Компании осознают необходимость 
+                        цифровизации финансовых процессов, однако выбор решения затруднён из-за специфики 
+                        российского учёта и требований регуляторов.
+                    </p>
+                    <p>
+                        CFO и финансовые директора — консервативная аудитория, которая принимает решения 
+                        взвешенно. Персонализированный аутрич позволяет начать диалог с конкретных задач компании.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section bg-gray">
+        <div class="container">
+            <h2>Бизнес-задача клиента</h2>
+            
+            <div class="card card-accent" style="max-width: 800px;">
+                <p style="font-size: 18px; margin-bottom: 24px;">
+                    Выйти на финансовых директоров и CFO компаний среднего бизнеса, которые сталкиваются 
+                    с проблемами консолидации отчётности. Нужны встречи с ЛПРами, готовыми обсуждать 
+                    автоматизацию финансовых процессов.
+                </p>
+                
+                <div class="grid grid-2" style="gap: 24px;">
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: 12px;">Целевая аудитория</h4>
+                        <ul style="list-style: none; color: var(--gray-600); font-size: 15px;">
+                            <li style="margin-bottom: 8px;">• CFO, финансовые директора</li>
+                            <li style="margin-bottom: 8px;">• Главные бухгалтеры крупных компаний</li>
+                            <li>• Руководители финансовых отделов</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: 12px;">Ключевые KPI</h4>
+                        <ul style="list-style: none; color: var(--gray-600); font-size: 15px;">
+                            <li style="margin-bottom: 8px;">• 15+ встреч в месяц</li>
+                            <li style="margin-bottom: 8px;">• Конверсия во встречу от 10%</li>
+                            <li>• Качественная квалификация лидов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="container">
+            <h2>Проблема и ограничения</h2>
+            <p class="section-subtitle">Финтех-продукт со сложным циклом продаж требовал особого подхода</p>
+            
+            <div class="grid grid-2">
+                <div class="problem-card">
+                    <h3>Консервативная аудитория</h3>
+                    <p>CFO не склонны к импульсивным решениям. Каждое изменение в финансовых системах требует тщательной проверки и согласования.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Высокая конкуренция за внимание</h3>
+                    <p>Финансовые директора получают множество предложений от банков, консультантов и IT-компаний. Стандартные подходы не работают.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Сложность демонстрации ценности</h3>
+                    <p>ROI от автоматизации отчётности неочевиден без погружения в специфику конкретной компании.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Длинный цикл согласования</h3>
+                    <p>Решения о внедрении финансовых систем принимаются месяцами. Нужен постоянный приток новых контактов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section bg-gray">
+        <div class="container">
+            <h2>Решение Leadspikers</h2>
+            <p class="section-subtitle">Персонализированный подход к консервативной финансовой аудитории</p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Сегментация по триггерам</h3>
+                    <p>Фокус на компаниях с признаками роста: новые юрлица, расширение географии, привлечение инвестиций — сигналы потребности в автоматизации.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">📊</div>
+                    <h3>Язык цифр</h3>
+                    <p>В сообщениях использовали конкретные метрики: время на закрытие периода, количество ручных операций, стоимость ошибок.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon blue">🤝</div>
+                    <h3>Экспертный диалог</h3>
+                    <p>Позиционирование не как продажа, а как консультация по оптимизации финансовых процессов.</p>
+                </div>
+            </div>
+            
+            <div class="card card-accent" style="max-width: 800px; margin: 48px auto 0;">
+                <h4 style="color: var(--orange); margin-bottom: 16px;">Ключевой инсайт</h4>
+                <p style="font-size: 18px; margin: 0;">
+                    CFO реагируют на конкретику: «Заметили, что у вас 5 юрлиц — как сейчас консолидируете отчётность?» 
+                    работает лучше, чем «Предлагаем решение для автоматизации».
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="container">
+            <h2>Каналы и механика аутрича</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4 style="margin-bottom: 24px;">Выбранные каналы</h4>
+                    
+                    <div class="service-feature">
+                        <div class="service-feature-icon">📱</div>
+                        <div>
+                            <h4>Telegram — основной канал</h4>
+                            <p>Несмотря на консервативность, финансовые директора активно используют Telegram для деловой переписки. Канал позволяет выстроить менее формальный диалог.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-feature">
+                        <div class="service-feature-icon" style="background: rgba(59, 130, 246, 0.1);">📧</div>
+                        <div>
+                            <h4>Email — для follow-up</h4>
+                            <p>Использовали email для отправки дополнительных материалов и кейсов после первого контакта в Telegram.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 24px;">Механика кампании</h4>
+                    
+                    <ul class="check-list" style="list-style: none;">
+                        <li>Анализ структуры компании: количество юрлиц, география, отрасль</li>
+                        <li>Персонализация под специфику финансовых процессов компании</li>
+                        <li>Ведение диалога до конкретной договорённости о встрече</li>
+                        <li>Передача квалифицированного контакта с контекстом беседы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section bg-gray">
+        <div class="container">
+            <h2>Результаты кампании</h2>
+            <p class="section-subtitle">Период реализации: 35 дней</p>
+            
+            <div class="grid grid-4">
+                <div class="value-card">
+                    <div class="stat-value">19</div>
+                    <h4>Встреч с ЛПРами</h4>
+                    <p>CFO и финдиректора</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="stat-value green">4</div>
+                    <h4>Закрытых сделки</h4>
+                    <p>конверсия 21%</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="stat-value blue">52%</div>
+                    <h4>Reply Rate</h4>
+                    <p>из 62 контактов</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="stat-value purple">290%</div>
+                    <h4>ROI кампании</h4>
+                    <p>за 3 месяца</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="container">
+            <h2>Почему это сработало</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-icon green">1</div>
+                    <h3>Понимание специфики FinTech</h3>
+                    <p>Сообщения демонстрировали знание проблематики: консолидация, закрытие периода, требования аудиторов. CFO видели, что обращается профессионал.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">2</div>
+                    <h3>Правильные триггеры</h3>
+                    <p>Выход на компании в момент роста — когда текущие процессы уже не справляются, но до момента, когда конкуренты успели занять нишу.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">3</div>
+                    <h3>Консультативный подход</h3>
+                    <p>Не продавали продукт, а предлагали обсудить задачи. Это снижало барьер входа для консервативной аудитории.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">4</div>
+                    <h3>Качественная квалификация</h3>
+                    <p>На встречи передавались только компании с реальной потребностью и бюджетом. Сейлзы не тратили время на нецелевые разговоры.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section bg-gray">
+        <div class="container">
+            <h2>Кому подойдёт такой подход</h2>
+            
+            <div class="audience-tags">
+                <span class="audience-tag">FinTech B2B</span>
+                <span class="audience-tag">Чек от 500К ₽</span>
+                <span class="audience-tag">CFO, финансовые директора</span>
+                <span class="audience-tag">Средний и крупный бизнес</span>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card card-accent">
+                    <h4 style="color: var(--green); margin-bottom: 16px;">✓ Подойдёт, если:</h4>
+                    <ul style="list-style: none; color: var(--gray-600); font-size: 15px;">
+                        <li style="margin-bottom: 12px;">• Ваш продукт решает задачи финансового блока</li>
+                        <li style="margin-bottom: 12px;">• ЦА — CFO, финдиректора, главбухи</li>
+                        <li style="margin-bottom: 12px;">• Есть понятный ROI от внедрения</li>
+                        <li>• Готовы к консультативным продажам</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--gray-400); margin-bottom: 16px;">✗ Не подойдёт, если:</h4>
+                    <ul style="list-style: none; color: var(--gray-600); font-size: 15px;">
+                        <li style="margin-bottom: 12px;">• Продукт для малого бизнеса без CFO</li>
+                        <li style="margin-bottom: 12px;">• Нужны быстрые транзакционные продажи</li>
+                        <li style="margin-bottom: 12px;">• Нет экспертизы для ведения сложных переговоров</li>
+                        <li>• Чек не окупает персонализированный подход</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            
+            <div style="max-width: 800px;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как выходить на CFO, если они не публичны?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Используем комбинацию источников: данные ЕГРЮЛ, профессиональные сообщества, публикации в отраслевых СМИ. Telegram-аккаунты часто привязаны к деловым профилям.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Не раздражает ли CFO холодный контакт?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>При правильной персонализации — нет. Когда сообщение показывает понимание конкретных задач компании, оно воспринимается как релевантное предложение, а не спам.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Какой средний срок от контакта до встречи?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>В этом кейсе среднее время от первого сообщения до назначенной встречи составило 8 дней. CFO нужно время на оценку релевантности предложения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: #0D0D0D; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 20% 50%, rgba(255, 77, 0, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255, 107, 44, 0.1) 0%, transparent 50%);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 36px; font-weight: 800; color: #FFFFFF; margin-bottom: 20px; line-height: 1.2;">Обсудим ваш проект?</h2>
+                    <p style="font-size: 18px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.7;">
+                        На 15-минутном созвоне разберём вашу задачу и предложим решение.
+                    </p>
+                    <ul style="list-style: none; margin: 0 0 32px 0; padding: 0;">
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Оценим реалистичность выхода на ЛПР в вашей нише</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Подберём формат: под ключ или обучение команды</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px;"><span style="color: #FF4D00;">✓</span> Составим конкретный план первых шагов</li>
+                    </ul>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="mailto:daniil@leadspikers.com" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">📧 daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">💬 @leadspikers_info</a>
+                    </div>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #FF4D00, #FF6B2C); border-radius: 24px; padding: 40px; box-shadow: 0 24px 48px rgba(255, 77, 0, 0.3);">
+                    <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;" style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 4px;">
+                            <input type="checkbox" checked required style="margin-top: 2px;">
+                            Отправляя заявку, вы даёте согласие на обработку персональных данных
+                        </label>
+                        <button type="submit" style="width: 100%; padding: 18px; background: #0D0D0D; color: #FFFFFF; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.3s;">Обсудить проект</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич под ключ. Превращаем холодные контакты в горячие встречи с ЛПРами.</p>
+                </div>
+                <div>
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="../uslugi/b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="../uslugi/obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="./" class="footer-link">Кейсы</a>
+                        <a href="../o-nas/" class="footer-link">О нас</a>
+                        <a href="../blog/" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="https://t.me/leadspikers_info" class="footer-link" target="_blank">Telegram</a>
+                        <a href="../kontakty/" class="footer-link">Все контакты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 Leadspikers. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Запишитесь на встречу</h2>
+            <p class="modal-subtitle">Обсудим вашу задачу и покажем, как мы работаем</p>
+            
+            <form class="modal-form" onsubmit="handleSubmit(event)">
+                <input type="text" class="modal-input" placeholder="Имя" required>
+                <input type="email" class="modal-input" placeholder="Email" required>
+                <div class="modal-phone-wrapper">
+                    <div class="modal-phone-flag">🇷🇺</div>
+                    <input type="tel" class="modal-input" placeholder="Телефон" required style="flex: 1;">
+                </div>
+                <div class="modal-checkbox">
+                    <input type="checkbox" id="consent" checked required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="modal-submit">Записаться на встречу</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.classList.toggle('active');
+            });
+        });
+        
+        // Modal
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            closeModal();
+        }
+        
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

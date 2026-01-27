@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Блог о B2B лидогенерации и аутрич-маркетинге. Telegram-аутрич, холодные письма, генерация встреч с ЛПР. Практика от агентства Leadspikers.">
+    <meta name="keywords" content="B2B лидогенерация, аутрич-маркетинг, Telegram-аутрич, холодные письма, генерация встреч с ЛПР, лиды для B2B, лидогенерация в России">
+    
+    <title>Блог о B2B-аутриче и лидогенерации — Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-light: #FF6B2C;
+            --orange-dark: #E04500;
+            
+            --black: #0D0D0D;
+            --gray-900: #18181B;
+            --gray-800: #27272A;
+            --gray-700: #3F3F46;
+            --gray-600: #52525B;
+            --gray-500: #71717A;
+            --gray-400: #A1A1AA;
+            --gray-300: #D4D4D8;
+            --gray-200: #E4E4E7;
+            --gray-100: #F4F4F5;
+            --gray-50: #FAFAFA;
+            --white: #FFFFFF;
+            --green: #10B981;
+            --blue: #3B82F6;
+            
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --max-width: 1200px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font);
+            background: #F9FAFB;
+            color: var(--gray-600);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.02em;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover { color: var(--black); }
+        .nav-link.active { color: var(--orange); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover { background: var(--orange-dark); }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid var(--gray-300);
+        }
+        
+        .btn-secondary:hover { border-color: var(--gray-400); }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--black);
+            transition: all 0.3s;
+        }
+        
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            z-index: 999;
+            padding: 100px 24px 24px;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .mobile-nav.active { display: flex; }
+        
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--black);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .mobile-nav .btn-primary {
+            margin-top: 16px;
+            padding: 16px;
+            font-size: 16px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .menu-toggle { display: flex; }
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 24px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+        }
+        
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        
+        /* Telegram Banner */
+        .telegram-banner {
+            background: linear-gradient(135deg, var(--gray-900) 0%, #1a1a1f 100%);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+        
+        .telegram-banner-content {
+            flex: 1;
+        }
+        
+        .telegram-banner h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        
+        .telegram-banner p {
+            font-size: 16px;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        
+        .telegram-banner .btn {
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 15px;
+        }
+        
+        .telegram-banner .btn:hover {
+            background: var(--orange-light);
+        }
+        
+        .telegram-icon {
+            font-size: 64px;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 700px) {
+            .telegram-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .telegram-icon { display: none; }
+        }
+        
+        /* Section */
+        .section {
+            padding: 80px 24px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        
+        .section-header p {
+            font-size: 17px;
+            color: var(--gray-500);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .blog-card {
+            background: #FFFFFF;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255, 77, 0, 0.08);
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+            align-self: flex-start;
+        }
+        
+        .blog-tag.telegram { background: rgba(0, 136, 204, 0.1); color: #0088CC; }
+        .blog-tag.email { background: rgba(16, 185, 129, 0.1); color: var(--green); }
+        .blog-tag.linkedin { background: rgba(0, 119, 181, 0.1); color: #0077B5; }
+        .blog-tag.strategy { background: rgba(139, 92, 246, 0.1); color: #8B5CF6; }
+        
+        .blog-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .blog-card p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+        
+        .read-more {
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 900px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 600px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Topics */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .topic-card {
+            background: #FFFFFF;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+        
+        .topic-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+        
+        .topic-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 77, 0, 0.06);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+        
+        .topic-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .topic-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 800px) {
+            .topics-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 500px) {
+            .topics-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 80px 24px;
+            background: #FFFFFF;
+        }
+        
+        .cta-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--gray-900) 0%, #1a1a1f 100%);
+            border-radius: 24px;
+            padding: 56px;
+            text-align: center;
+        }
+        
+        .cta-card h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        .cta-card > p {
+            font-size: 17px;
+            color: var(--gray-400);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn {
+            padding: 16px 32px;
+            font-size: 15px;
+        }
+        
+        .cta-buttons .btn-primary {
+            background: var(--orange);
+        }
+        
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+        
+        .cta-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 80px 24px 40px;
+            background: #FFFFFF;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 56px;
+            margin-bottom: 56px;
+        }
+        
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--gray-500);
+            max-width: 280px;
+            line-height: 1.7;
+        }
+        
+        .footer-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-link {
+            font-size: 14px;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover { color: var(--orange); }
+        
+        .footer-bottom {
+            padding-top: 28px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+        
+        @media (max-width: 800px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="../uslugi/" class="nav-link">Услуги</a>
+                <a href="../kejsy/" class="nav-link">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="./" class="nav-link active">Блог</a>
+                <a href="../kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Меню" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../uslugi/" class="mobile-nav-link">Услуги</a>
+        <a href="../kejsy/" class="mobile-nav-link">Кейсы</a>
+        <a href="../o-nas/" class="mobile-nav-link">О нас</a>
+        <a href="./" class="mobile-nav-link">Блог</a>
+        <a href="../kontakty/" class="mobile-nav-link">Контакты</a>
+        <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Блог о B2B-аутриче</h1>
+        <p class="hero-subtitle">
+            Практика, кейсы и инсайты о лидогенерации в B2B. Telegram-аутрич, холодные письма, работа с ЛПРами.
+        </p>
+    </section>
+
+    <!-- Telegram Banner Top -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="telegram-banner">
+                <div class="telegram-banner-content">
+                    <h3>📱 Больше практики — в Telegram</h3>
+                    <p>Кейсы, наблюдения и инсайты из реальных кампаний. Подписывайтесь на наш Telegram-канал для ежедневной практики B2B-аутрича.</p>
+                    <a href="https://t.me/leadspikers" target="_blank" class="btn">Подписаться на канал →</a>
+                </div>
+                <div class="telegram-icon">💬</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Полезные материалы</h2>
+                <p>Практические статьи о B2B лидогенерации и аутрич-маркетинге</p>
+            </div>
+            
+            <div class="blog-grid">
+                <a href="telegram-autrich-guide.html" class="blog-card">
+                    <span class="blog-tag telegram">Telegram-аутрич</span>
+                    <h3>Telegram-аутрич в 2026: полное руководство по генерации встреч с ЛПР</h3>
+                    <p>Как выходить на лиц, принимающих решения, через Telegram. Персонализация, триггеры, скрипты и обход ограничений.</p>
+                    <div class="blog-meta">
+                        <span>12 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="b2b-lidogeneracia-russia.html" class="blog-card">
+                    <span class="blog-tag strategy">Стратегия</span>
+                    <h3>B2B лидогенерация в России: что работает в 2026 году</h3>
+                    <p>Обзор каналов и методов B2B лидогенерации на российском рынке. Сравнение эффективности и стоимости лида.</p>
+                    <div class="blog-meta">
+                        <span>10 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="cold-email-dostavlyaemost.html" class="blog-card">
+                    <span class="blog-tag email">Email-аутрич</span>
+                    <h3>Холодные письма: как добиться 95% доставляемости</h3>
+                    <p>Прогрев доменов, настройка DNS, работа с репутацией отправителя. Технический гайд по email-аутричу.</p>
+                    <div class="blog-meta">
+                        <span>15 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="icp-segmentacia-bazy.html" class="blog-card">
+                    <span class="blog-tag strategy">Стратегия</span>
+                    <h3>ICP и сегментация: как найти идеальных клиентов для B2B</h3>
+                    <p>Определение Ideal Customer Profile, поиск триггеров, сегментация базы. Фундамент успешного аутрича.</p>
+                    <div class="blog-meta">
+                        <span>8 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="personalizacia-soobschenij.html" class="blog-card">
+                    <span class="blog-tag">Персонализация</span>
+                    <h3>Персонализация в аутриче: от шаблона до ответа</h3>
+                    <p>Техники написания сообщений, которые получают ответы. Триггеры, research, структура первого касания.</p>
+                    <div class="blog-meta">
+                        <span>11 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <!-- Mid CTA -->
+                <div style="grid-column: 1 / -1; background: linear-gradient(135deg, var(--gray-900), #1a1a1f); border-radius: 20px; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 16px 0;">
+                    <div>
+                        <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px;">Готовы попробовать аутрич?</h3>
+                        <p style="font-size: 15px; color: #A1A1AA; max-width: 450px;">Расскажем, как применить эти принципы в вашем бизнесе и какие результаты ожидать.</p>
+                    </div>
+                    <a href="../kontakty/" class="btn" style="background: var(--orange); color: #fff; padding: 16px 28px; font-size: 15px; white-space: nowrap;">Обсудить проект →</a>
+                </div>
+
+                <a href="linkedin-outreach-b2b.html" class="blog-card">
+                    <span class="blog-tag linkedin">LinkedIn</span>
+                    <h3>LinkedIn-аутрич для B2B: стратегия на 2026 год</h3>
+                    <p>Профиль, контент, connection requests, InMail. Как использовать LinkedIn для генерации лидов в B2B.</p>
+                    <div class="blog-meta">
+                        <span>13 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="metriki-autricha.html" class="blog-card">
+                    <span class="blog-tag strategy">Аналитика</span>
+                    <h3>Метрики аутрича: что отслеживать и как оптимизировать</h3>
+                    <p>Reply rate, conversion rate, CAC — какие метрики важны, как их считать и улучшать. Бенчмарки по нишам.</p>
+                    <div class="blog-meta">
+                        <span>9 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="generacia-vstreach-lpr.html" class="blog-card">
+                    <span class="blog-tag telegram">Практика</span>
+                    <h3>Генерация встреч с ЛПР: от первого сообщения до календаря</h3>
+                    <p>Пошаговый процесс: как довести диалог от первого касания до забронированной встречи с лицом, принимающим решения.</p>
+                    <div class="blog-meta">
+                        <span>14 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+                
+                <a href="lidy-dlya-b2b-saas.html" class="blog-card">
+                    <span class="blog-tag strategy">SaaS</span>
+                    <h3>Лиды для B2B SaaS: особенности аутрича в IT-нишах</h3>
+                    <p>Специфика работы с IT-компаниями, SaaS-продуктами и Enterprise-клиентами. Триггеры и подходы.</p>
+                    <div class="blog-meta">
+                        <span>10 мин чтения</span>
+                        <span class="read-more">Читать →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics -->
+    <section class="section" style="background: #FFFFFF;">
+        <div class="container">
+            <div class="section-header">
+                <h2>О чём пишем</h2>
+                <p>Ключевые направления контента</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">📱</div>
+                    <h4>Telegram-аутрич</h4>
+                    <p>Выход на ЛПРов через Telegram: персонализация, триггеры, скрипты.</p>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">📧</div>
+                    <h4>Email-аутрич</h4>
+                    <p>Холодные письма: прогрев доменов, доставляемость, цепочки.</p>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p>B2B-продажи через LinkedIn: профиль, контент, outreach.</p>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">🎯</div>
+                    <h4>ICP и сегментация</h4>
+                    <p>Определение идеального клиента и работа с базой.</p>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">✏️</div>
+                    <h4>Персонализация</h4>
+                    <p>Техники написания сообщений, которые получают ответы.</p>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">📊</div>
+                    <h4>Метрики</h4>
+                    <p>Какие показатели отслеживать и как оптимизировать воронку.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 32px; background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1F 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50%; left: -20%; width: 80%; height: 200%; background: radial-gradient(ellipse, rgba(255, 77, 0, 0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(255, 107, 44, 0.06) 0%, transparent 60%); pointer-events: none;"></div>
+        
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; position: relative; z-index: 1;">
+            <div>
+                <h2 style="font-size: 36px; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; line-height: 1.2;">Хотите похожие результаты?</h2>
+                <p style="font-size: 17px; color: rgba(255,255,255,0.6); margin-bottom: 28px; line-height: 1.7;">Обсудим вашу задачу и расскажем, как аутрич может работать в вашей нише.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 15px;"><span style="color: var(--orange);">✓</span> Бесплатная консультация</div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 15px;"><span style="color: var(--orange);">✓</span> Оценка потенциала вашей ниши</div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 15px;"><span style="color: var(--orange);">✓</span> Прогноз результатов</div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, var(--orange), #FF6B2C); border-radius: 20px; padding: 36px; box-shadow: 0 24px 48px rgba(255, 77, 0, 0.3);">
+                <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;" style="display: flex; flex-direction: column; gap: 14px;">
+                    <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                    <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                    <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; background: #FFFFFF;">
+                    <button type="submit" style="width: 100%; padding: 18px; background: #0D0D0D; color: #FFFFFF; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; margin-top: 8px;">Обсудить проект</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        @media (max-width: 800px) {
+            .cta-card { grid-template-columns: 1fr !important; }
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич. Выводим на диалог с теми, кто принимает решения.</p>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="../uslugi/b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="../uslugi/obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="../kejsy/" class="footer-link">Кейсы</a>
+                        <a href="../o-nas/" class="footer-link">О нас</a>
+                        <a href="./" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="mailto:daniil@leadspikers.com" class="footer-link">daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" class="footer-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2026 Leadspikers. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.menu-toggle');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+    
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 2000; align-items: center; justify-content: center; padding: 20px;">
+        <div onclick="event.stopPropagation()" style="background: #fff; border-radius: 20px; padding: 40px; max-width: 440px; width: 100%; position: relative;">
+            <button onclick="closeModal()" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border: none; background: #f4f4f5; border-radius: 10px; font-size: 24px; cursor: pointer; color: #71717a;">×</button>
+            <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Обсудить проект</h2>
+            <p style="font-size: 15px; color: #71717a; margin-bottom: 24px;">Оставьте заявку — свяжемся в течение дня</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); closeModal();">
+                <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <input type="text" placeholder="Telegram (@username)" style="width: 100%; padding: 16px 18px; border: 1px solid #e4e4e7; border-radius: 12px; font-size: 15px; font-family: inherit; margin-bottom: 12px;">
+                <div style="display: flex; align-items: flex-start; gap: 12px; margin: 8px 0;">
+                    <input type="checkbox" checked required style="width: 18px; height: 18px; margin-top: 2px;">
+                    <label style="font-size: 13px; color: #71717a; line-height: 1.5;">Отправляя заявку, вы даёте согласие на обработку персональных данных</label>
+                </div>
+                <button type="submit" style="width: 100%; padding: 18px; background: #FF4D00; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px;">Обсудить проект</button>
+            </form>
+        </div>
+    </div>
+    
+    <style>
+        .modal-overlay.active { display: flex !important; }
+    </style>
+</body>
+</html>

@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кейс JOBSKI: 27 встреч и 11 клиентов за 30 дней через Telegram-аутрич. HR-Tech стартап научился привлекать CEO самостоятельно.">
+    <meta name="keywords" content="B2B аутрич HR-Tech, кейс JOBSKI, Telegram outreach, лидогенерация для стартапов, аутрич в телеграм">
+    
+    <title>JOBSKI: 27 встреч и 11 клиентов за месяц — Кейс Leadspikers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "JOBSKI: 27 встреч и 11 клиентов через Telegram-аутрич в HR-Tech",
+        "author": {
+            "@type": "Organization",
+            "name": "Leadspikers"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Leadspikers"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --orange: #FF4D00;
+            --orange-light: #FF6B2C;
+            --orange-dark: #E04500;
+            --orange-glow: rgba(255, 77, 0, 0.12);
+            --orange-subtle: rgba(255, 77, 0, 0.06);
+            
+            --black: #0A0A0A;
+            --gray-900: #171717;
+            --gray-800: #262626;
+            --gray-700: #404040;
+            --gray-600: #525252;
+            --gray-500: #737373;
+            --gray-400: #A3A3A3;
+            --gray-300: #D4D4D4;
+            --gray-200: #E5E5E5;
+            --gray-100: #F5F5F5;
+            --gray-50: #FAFAFA;
+            --white: #FFFFFF;
+            
+            --green: #10B981;
+            --blue: #3B82F6;
+            --purple: #8B5CF6;
+            
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --max-width: 1200px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--gray-700);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a { color: inherit; text-decoration: none; }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(255, 77, 0, 0.25);
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .nav-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color var(--transition);
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--black);
+        }
+        
+        .nav-link.active::after, .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.3);
+            font-weight: 700;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.4);
+        }
+        
+        /* Case Hero */
+        .case-hero {
+            padding: 180px 32px 100px;
+            background: var(--white);
+        }
+        
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        
+        .breadcrumb-link {
+            color: var(--gray-500);
+            transition: color var(--transition);
+        }
+        
+        .breadcrumb-link:hover {
+            color: var(--orange);
+        }
+        
+        .breadcrumb-separator {
+            color: var(--gray-400);
+        }
+        
+        .breadcrumb-current {
+            color: var(--black);
+            font-weight: 500;
+        }
+        
+        .case-hero-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .case-hero-tag {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--orange-subtle);
+            border: 1px solid rgba(255, 77, 0, 0.2);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--orange);
+        }
+        
+        .case-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 48px;
+        }
+        
+        .case-hero-highlight {
+            display: flex;
+            gap: 48px;
+            padding: 40px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+        }
+        
+        .case-hero-stat {
+            text-align: left;
+        }
+        
+        .case-hero-stat-value {
+            font-size: 52px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        
+        .case-hero-stat-label {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        
+        /* Case Section */
+        .case-section {
+            padding: 100px 32px;
+        }
+        
+        .case-section h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+        }
+        
+        .case-section h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        
+        .case-section p {
+            font-size: 17px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 32px;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all var(--transition);
+        }
+        
+        .card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .card-accent {
+            border-color: var(--orange);
+            background: var(--orange-subtle);
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--orange-subtle);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 32px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            transition: all var(--transition);
+        }
+        
+        .value-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .service-feature {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .service-feature-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .service-feature h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .service-feature p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        .audience-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        
+        .audience-tag {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            transition: all var(--transition);
+        }
+        
+        .audience-tag:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 28px 0;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--black);
+            text-align: left;
+            cursor: pointer;
+            transition: color var(--transition);
+        }
+        
+        .faq-question:hover {
+            color: var(--orange);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            color: var(--orange);
+            transition: transform var(--transition);
+            font-weight: 300;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 28px;
+        }
+        
+        .faq-answer p {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 32px;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        .cta-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cta-inner h2 {
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+        }
+        
+        .cta-inner p {
+            font-size: 22px;
+            color: var(--gray-500);
+            margin-bottom: 48px;
+            line-height: 1.7;
+        }
+        
+        .cta-contacts {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        
+        .cta-email, .cta-telegram {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 36px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 14px;
+            font-size: 17px;
+            color: var(--gray-700);
+            transition: all var(--transition);
+        }
+        
+        .cta-email:hover, .cta-telegram:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.1);
+        }
+        
+        .cta-email span {
+            color: var(--orange);
+            font-weight: 700;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--gray-600);
+            transition: all var(--transition);
+        }
+        
+        .modal-close:hover {
+            background: var(--gray-200);
+            color: var(--black);
+        }
+        
+        .modal h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+        }
+        
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: var(--font);
+            color: var(--black);
+            transition: all var(--transition);
+        }
+        
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.1);
+        }
+        
+        .modal-input::placeholder {
+            color: var(--gray-400);
+        }
+        
+        .modal-phone-wrapper {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .modal-phone-flag {
+            width: 60px;
+            padding: 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .modal-phone-input {
+            flex: 1;
+        }
+        
+        .modal-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        
+        .modal-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--orange);
+        }
+        
+        .modal-checkbox label {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            cursor: pointer;
+        }
+        
+        .modal-submit {
+            width: 100%;
+            padding: 22px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            color: var(--white);
+            border: none;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all var(--transition);
+            margin-top: 8px;
+            box-shadow: 0 8px 24px rgba(255, 77, 0, 0.3);
+        }
+        
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 77, 0, 0.4);
+        }
+        
+        @media (max-width: 900px) {
+            .grid-2, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .case-hero-highlight {
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="../" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Leadspikers</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="../uslugi/" class="nav-link">Услуги</a>
+                <a href="./" class="nav-link active">Кейсы</a>
+                <a href="../o-nas/" class="nav-link">О нас</a>
+                <a href="../blog/" class="nav-link">Блог</a>
+                <a href="../kontakty/" class="nav-link">Контакты</a>
+                <button class="btn btn-primary" onclick="openModal()">Обсудить проект</button>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero кейса -->
+    <section class="case-hero">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../" class="breadcrumb-link">Главная</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="./" class="breadcrumb-link">Кейсы</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">JOBSKI</span>
+            </nav>
+            
+            <div class="case-hero-meta">
+                <span class="case-hero-tag">📱 Telegram</span>
+                <span class="case-hero-tag">HR-Tech / Стартапы</span>
+            </div>
+            
+            <h1>Telegram-аутрич для HR-Tech стартапа: 11 клиентов за 30 дней и обучение команды</h1>
+            
+            <div class="case-hero-highlight">
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">27</div>
+                    <div class="case-hero-stat-label">встреч за 30 дней</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">11</div>
+                    <div class="case-hero-stat-label">клиентов</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">41%</div>
+                    <div class="case-hero-stat-label">конверсия в клиента</div>
+                </div>
+                <div class="case-hero-stat">
+                    <div class="case-hero-stat-value">18+</div>
+                    <div class="case-hero-stat-label">встреч/месяц после обучения</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании и рынке -->
+    <section class="case-section">
+        <div class="container">
+            <h2>О компании и рынке</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">О клиенте</h4>
+                    <p>
+                        JOBSKI — HR-Tech сервис для поиска персонала, ориентированный на стартапы и небольшие IT-компании. 
+                        Продукт помогает быстрее закрывать вакансии и повышать конверсию откликов.
+                    </p>
+                    <p>
+                        Компания работает на российском рынке, основная аудитория — CEO и фаундеры технологических стартапов, 
+                        которые лично занимаются наймом на ранних стадиях.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-md);">Контекст рынка</h4>
+                    <p>
+                        Рынок HR-Tech в России активно растёт: стартапы конкурируют за таланты, но бюджеты на рекрутинг ограничены. 
+                        CEO небольших компаний ищут эффективные и недорогие решения для найма.
+                    </p>
+                    <p>
+                        При этом фаундеры стартапов активны в Telegram, где обсуждают бизнес-вопросы и принимают решения. 
+                        Это делает мессенджер идеальным каналом для B2B-аутрича.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бизнес-задача клиента -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Бизнес-задача клиента</h2>
+            
+            <div class="card card-accent" style="max-width: 800px;">
+                <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
+                    Найти стартапы и небольшие IT-компании, которые испытывают проблемы с наймом, и вывести их на встречу с CEO 
+                    для демонстрации сервиса JOBSKI. Параллельно — обучить команду самостоятельному аутричу.
+                </p>
+                
+                <div class="grid grid-2" style="gap: var(--space-lg);">
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: var(--space-sm);">Целевая аудитория</h4>
+                        <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <li style="margin-bottom: var(--space-xs);">• CEO и фаундеры стартапов</li>
+                            <li style="margin-bottom: var(--space-xs);">• Владельцы небольших IT-компаний</li>
+                            <li>• HR-бренды на ранних стадиях</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--orange); margin-bottom: var(--space-sm);">Двойная цель</h4>
+                        <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <li style="margin-bottom: var(--space-xs);">• Получить клиентов за первый месяц</li>
+                            <li style="margin-bottom: var(--space-xs);">• Обучить команду методологии</li>
+                            <li>• Выйти на автономную работу</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проблема и ограничения -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Проблема и ограничения</h2>
+            
+            <p class="section-subtitle">
+                С какими вызовами столкнулся JOBSKI до начала работы с нами
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="problem-card">
+                    <h3>Отсутствие системного потока лидов</h3>
+                    <p>Продажи строились на случайных рекомендациях и личных знакомствах CEO. Не было предсказуемого канала привлечения новых клиентов.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Ограниченный бюджет на маркетинг</h3>
+                    <p>Как стартап ранней стадии, JOBSKI не мог позволить себе дорогую рекламу. Нужен был канал с высоким ROI и низкими затратами на старте.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Конкуренция с крупными игроками</h3>
+                    <p>На рынке HR-Tech много известных брендов. Маленькому стартапу сложно пробиться через шум и донести ценность продукта.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Зависимость от агентств</h3>
+                    <p>Стратегическая цель — научиться привлекать клиентов самостоятельно, без постоянной зависимости от внешних подрядчиков.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Решение Leadspikers -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Решение Leadspikers</h2>
+            
+            <p class="section-subtitle">
+                Двухэтапная работа: аутрич под ключ + обучение команды
+            </p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Фокус на стартапы</h3>
+                    <p>Определили ICP: стартапы и небольшие IT-компании с активным наймом. CEO лично принимает решения о HR-инструментах и быстро отвечает в Telegram.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">🔍</div>
+                    <h3>HR-триггеры</h3>
+                    <p>Искали компании с конкретными болями: открытые вакансии на HH, низкий response rate на отклики, активный найм разработчиков.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon blue">✏️</div>
+                    <h3>Персонализация под боли CEO</h3>
+                    <p>Каждое сообщение учитывало конкретные проблемы найма: нехватку кандидатов, долгий срок закрытия вакансий, низкую конверсию откликов.</p>
+                </div>
+            </div>
+            
+            <div class="card card-accent mt-2xl" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h4 style="color: var(--orange); margin-bottom: var(--space-md);">Особенность проекта</h4>
+                <p style="font-size: var(--font-size-lg); margin: 0;">
+                    После получения первых результатов команда JOBSKI прошла обучение и теперь самостоятельно делает стабильный поток встреч — 18+ в месяц без нашего участия.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каналы и механика аутрича -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Каналы и механика аутрича</h2>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Выбранные каналы</h4>
+                    
+                    <div class="service-feature" style="margin-bottom: var(--space-md);">
+                        <div class="service-feature-icon">📱</div>
+                        <div>
+                            <h4>Telegram — главный канал</h4>
+                            <p>Личный ручной Telegram-аутрич. CEO стартапов активны в мессенджере, быстро отвечают на релевантные предложения. Вся переписка до момента «давайте созвонимся» — полностью ручная.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="color: var(--text-primary); margin-bottom: var(--space-lg);">Механика кампании</h4>
+                    
+                    <ul style="color: var(--text-secondary);">
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Поиск стартапов с активным наймом через вакансии на HH и LinkedIn
+                        </li>
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Анализ болей: низкий response rate, долгий поиск, нехватка кандидатов
+                        </li>
+                        <li style="margin-bottom: var(--space-md); padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Персонализированное сообщение под конкретные вакансии компании
+                        </li>
+                        <li style="padding-left: var(--space-lg); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--green);">✓</span>
+                            Ручное ведение диалога до договорённости о встрече
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Результаты кампании -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Результаты кампании</h2>
+            
+            <p class="section-subtitle">
+                Период реализации: 30 дней + обучение команды
+            </p>
+            
+            <div class="grid grid-4">
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--orange);">27</div>
+                    <h4>Встреч с CEO</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">за 30 дней</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--green);">11</div>
+                    <h4>Закрытых клиентов</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">конверсия 41%</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--blue);">18+</div>
+                    <h4>Встреч/месяц</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">после обучения команды</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="hero-stat-value" style="color: var(--purple);">100%</div>
+                    <h4>Самостоятельность</h4>
+                    <p style="font-size: var(--font-size-xs); color: var(--text-muted);">команда работает автономно</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--space-2xl); color: var(--text-muted); font-size: var(--font-size-sm);">
+                * После обучения команда JOBSKI самостоятельно поддерживает поток встреч
+            </p>
+        </div>
+    </section>
+
+    <!-- Почему это сработало -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Почему это сработало</h2>
+            
+            <p class="section-subtitle">
+                Ключевые факторы успеха кампании для JOBSKI
+            </p>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-icon green">1</div>
+                    <h3>Точное попадание в боль</h3>
+                    <p>CEO стартапов лично страдают от проблем с наймом. Предложение решить конкретную боль (нехватка кандидатов, долгий поиск) вызывало моментальный отклик.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">2</div>
+                    <h3>Правильный канал</h3>
+                    <p>Фаундеры стартапов живут в Telegram. Они быстро отвечают на сообщения, принимают решения в мессенджере и не тратят время на формальности email.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">3</div>
+                    <h3>Релевантные триггеры</h3>
+                    <p>Обращались к компаниям с открытыми вакансиями и видимыми проблемами найма. Это не холодный контакт — это помощь в решении актуальной задачи.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon green">4</div>
+                    <h3>Передача компетенции</h3>
+                    <p>После успешного пилота обучили команду JOBSKI методологии. Теперь они самостоятельно делают 18+ встреч в месяц без внешней помощи.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кому подойдёт такой подход -->
+    <section class="case-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Кому подойдёт такой подход</h2>
+            
+            <p class="section-subtitle">
+                Если ваша ситуация похожа — комбинация аутрича и обучения может сработать
+            </p>
+            
+            <div class="audience-tags mb-2xl">
+                <span class="audience-tag">HR-Tech / SaaS продукт</span>
+                <span class="audience-tag">Стартап или SMB</span>
+                <span class="audience-tag">ЦА: CEO, Founders</span>
+                <span class="audience-tag">Ниши: IT, Tech</span>
+                <span class="audience-tag">Рынок: Россия и СНГ</span>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card card-accent">
+                    <h4 style="color: var(--green); margin-bottom: var(--space-md);">✓ Подойдёт, если:</h4>
+                    <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-sm);">• Продаёте B2B-решение для стартапов или SMB</li>
+                        <li style="margin-bottom: var(--space-sm);">• Ваши ЛПРы — CEO/фаундеры, активные в Telegram</li>
+                        <li style="margin-bottom: var(--space-sm);">• Хотите не только получить клиентов, но и научиться</li>
+                        <li>• Готовы инвестировать время в освоение методологии</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--text-muted); margin-bottom: var(--space-md);">✗ Не подойдёт, если:</h4>
+                    <ul style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-sm);">• Ваша ЦА — корпорации с длинными согласованиями</li>
+                        <li style="margin-bottom: var(--space-sm);">• Нет ресурсов на обучение команды</li>
+                        <li style="margin-bottom: var(--space-sm);">• Нужен разовый результат без передачи знаний</li>
+                        <li>• ЛПРы не используют Telegram для работы</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="case-section">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            
+            <div style="max-width: 800px;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как долго длилось обучение команды?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Обучение заняло около 2 недель после завершения пилотной кампании. За это время передали методологию, инструменты поиска ЛПРов, шаблоны сообщений и систему метрик. Команда закрепила навыки на практике под нашим контролем.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько человек обучили?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Обучили ключевых членов команды, которые теперь самостоятельно ведут аутрич. Методология масштабируется — при росте компании можно обучить новых сотрудников по готовым материалам.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Почему конверсия во встречу такая высокая (41%)?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Высокая конверсия — результат точного ICP и релевантных триггеров. Мы обращались к CEO, которые прямо сейчас испытывают боль с наймом. Это не холодный контакт, а предложение решить актуальную проблему.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Подойдёт ли для другого HR-Tech продукта?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, методология применима к любому HR-Tech решению, если ЛПРы активны в Telegram. Ключевое — понимание конкретных болей целевой аудитории и наличие триггеров для персонализации.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли получить только обучение без аутрича под ключ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, мы предлагаем отдельную услугу обучения команды аутричу. Однако комбинация «пилот + обучение» даёт лучший результат: сначала показываем на практике, потом передаём знания.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 80px 0; background: #0D0D0D; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 20% 50%, rgba(255, 77, 0, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255, 107, 44, 0.1) 0%, transparent 50%);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 36px; font-weight: 800; color: #FFFFFF; margin-bottom: 20px; line-height: 1.2;">Обсудим ваш проект?</h2>
+                    <p style="font-size: 18px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.7;">
+                        На 15-минутном созвоне разберём вашу задачу и предложим решение.
+                    </p>
+                    <ul style="list-style: none; margin: 0 0 32px 0; padding: 0;">
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Оценим реалистичность выхода на ЛПР в вашей нише</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 12px;"><span style="color: #FF4D00;">✓</span> Подберём формат: под ключ или обучение команды</li>
+                        <li style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 16px;"><span style="color: #FF4D00;">✓</span> Составим конкретный план первых шагов</li>
+                    </ul>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="mailto:daniil@leadspikers.com" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">📧 daniil@leadspikers.com</a>
+                        <a href="https://t.me/leadspikers_info" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 15px; font-weight: 600; color: #FFFFFF; text-decoration: none;">💬 @leadspikers_info</a>
+                    </div>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #FF4D00, #FF6B2C); border-radius: 24px; padding: 40px; box-shadow: 0 24px 48px rgba(255, 77, 0, 0.3);">
+                    <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;" style="display: flex; flex-direction: column; gap: 16px;">
+                        <input type="text" placeholder="Имя" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="email" placeholder="Email" required style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 16px 20px; border: none; border-radius: 12px; font-size: 16px; font-family: inherit; background: #FFFFFF;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 4px;">
+                            <input type="checkbox" checked required style="margin-top: 2px;">
+                            Отправляя заявку, вы даёте согласие на обработку персональных данных
+                        </label>
+                        <button type="submit" style="width: 100%; padding: 18px; background: #0D0D0D; color: #FFFFFF; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; transition: all 0.3s;">Обсудить проект</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Leadspikers</span>
+                    </a>
+                    <p>Персонализированный B2B-аутрич под ключ. Превращаем холодные контакты в горячие встречи с ЛПРами.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Услуги</div>
+                    <div class="footer-links">
+                        <a href="../uslugi/b2b-autrich.html" class="footer-link">B2B-аутрич под ключ</a>
+                        <a href="../uslugi/obuchenie-autrich.html" class="footer-link">Обучение аутричу</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Компания</div>
+                    <div class="footer-links">
+                        <a href="./" class="footer-link">Кейсы</a>
+                        <a href="../o-nas/" class="footer-link">О нас</a>
+                        <a href="../blog/" class="footer-link">Блог</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-links">
+                        <a href="https://t.me/leadspikers_info" class="footer-link" target="_blank">Telegram</a>
+                        <a href="../kontakty/" class="footer-link">Все контакты</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Leadspikers. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Оставляйте заявку, чтобы попасть на бесплатную встречу</h2>
+            <p class="modal-subtitle">Обсудим вашу задачу и покажем, как мы работаем</p>
+            
+            <form class="modal-form" onsubmit="handleSubmit(event)">
+                <input type="text" class="modal-input" placeholder="Имя" required>
+                <input type="email" class="modal-input" placeholder="Email" required>
+                <div class="modal-phone-wrapper">
+                    <div class="modal-phone-flag">🇷🇺</div>
+                    <input type="tel" class="modal-input modal-phone-input" placeholder="• 077 123456" required>
+                </div>
+                
+                <div class="modal-checkbox">
+                    <input type="checkbox" id="consent" checked required>
+                    <label for="consent">
+                        Отправляя заявку, вы даёте согласие на обработку своих персональных данных
+                    </label>
+                </div>
+                
+                <button type="submit" class="modal-submit">Записаться на встречу</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            closeModal();
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    </body>
+</html>
