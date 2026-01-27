@@ -358,7 +358,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 8px 20px;
             flex-wrap: wrap;
         }
         
@@ -386,25 +386,35 @@
         }
         
         .client-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--gray-700);
-            padding: 10px 20px;
-            background: var(--gray-50);
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            transition: all 0.2s;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-400);
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            transition: color 0.2s;
+            position: relative;
+        }
+        
+        .client-name:not(:last-child)::after {
+            content: "·";
+            margin-left: 20px;
+            color: var(--gray-300);
+            font-weight: 400;
         }
         
         .client-name:hover {
-            background: var(--white);
-            border-color: var(--orange);
-            color: var(--orange);
+            color: var(--gray-700);
+            background: transparent;
+            border-color: transparent;
         }
         
         @media (max-width: 600px) {
             .clients { padding: 24px 20px; }
-            .clients-logos { gap: 24px; }
+            .clients-logos { gap: 12px 20px; }
+            .client-name { font-size: 13px; }
+            .client-name:not(:last-child)::after { margin-left: 12px; }
         }
         
         /* Section */
@@ -1577,7 +1587,7 @@
                 <span class="client-name">JOBSKI</span>
                 <span class="client-name">Finboo</span>
                 <span class="client-name">NDCore</span>
-                <span class="client-name">WikiLect</span>
+                <span class="client-name">Xway</span>
                 <span class="client-name">IThub</span>
                 <span class="client-name">Rechka AI</span>
             </div>
